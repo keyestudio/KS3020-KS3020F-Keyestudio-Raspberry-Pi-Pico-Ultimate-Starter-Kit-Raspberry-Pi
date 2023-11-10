@@ -2,15 +2,7 @@
 
 1.  **Introduction**
 
-Sensors or components are ubiquitous in our daily life. For example,
-some public street lights turn on automatically at night and turn off
-automatically during the day. Why? In fact, this make use of a
-photosensitive element that senses the intensity of external ambient
-light. When the outdoor brightness decreases at night, the street lights
-will automatically turn on. In the daytime, the street lights will
-automatically turn off. The principle of this is very simple. In this
-lesson we will use Raspberry Pi Pico to control LEDs to implement the
-function of this street light.
+Sensors or components are ubiquitous in our daily life. For example, some public street lights turn on automatically at night and turn off automatically during the day. Why? In fact, this make use of a photosensitive element that senses the intensity of external ambient light. When the outdoor brightness decreases at night, the street lights will automatically turn on. In the daytime, the street lights will automatically turn off. The principle of this is very simple. In this lesson we will use Raspberry Pi Pico to control LEDs to implement the function of this street light.
 
 2.  **Components Required**
 
@@ -51,47 +43,32 @@ function of this street light.
 
 ![](/media/9e553e75b6f976f33438171eb2f2e775.png)
 
-It is a photosensitive resistor, its principle is that the photoresistor
-surface receives brightness (light) to reduce the resistance. The
-resistance value will change with the detected intensity of the ambient
-light . With this property, we can use photoresistors to detect light
-intensity.  Photoresistors and other electronic symbols are as follows:
- 
+It is a photosensitive resistor, its principle is that the photoresistor surface receives brightness (light) to reduce the resistance. The resistance value will change with the detected intensity of the ambient light . With this property, we can use photoresistors to detect light intensity. Photoresistors and other electronic symbols are as follows:
+
 
 ![](/media/7d575da675a2f6cb511d28b801e2abaa.png)
 
-The following circuit is used to detect changes in resistance values of
-photoresistors:
+The following circuit is used to detect changes in resistance values of photoresistors:
 
 ![](/media/5a7f7e641eb78007760a94151c1d80a5.png)
 
-In the circuit above, when the resistance of the photoresistor changes
-due to the change of light intensity, the voltage between the
-photoresistor and resistance R2 will also change.  Thus, the intensity
-of light can be obtained by measuring this voltage.
+In the circuit above, when the resistance of the photoresistor changes due to the change of light intensity, the voltage between the photoresistor and resistance R2 will also change.  Thus, the intensity of light can be obtained by measuring this voltage.
 
 4.  **Read the Analog Value**
 
-We first use a simple code to read the value of the photoresistor, print
-it in the serial monitor. For wiring, please refer to the following
-wiring diagram.
+We first use a simple code to read the value of the photoresistor, print it in the serial monitor. For wiring, please refer to the following wiring diagram.
 
 ![](/media/e3fde13b200927346e04b032373ce638.png)
 
 ![](/media/b97ff27ae10e3499c36312c8ee4881f8.png)
 
-The code used in this project is saved in the file KS3020 Keyestudio
-Raspberry Pi Pico Learning Kit Ultimate Edition\\3. Raspberry Pi
-System\\Python\_Tutorial\\2. Projects\\Project 24：Night Lamp.
+The code used in this project is saved in the file KS3020 Keyestudio Raspberry Pi Pico Learning Kit Ultimate Edition\\3. Raspberry Pi System\\Python\_Tutorial\\2. Projects\\Project 24：Night Lamp.
 
-You can move the code anywhere. We save the code to the pi folder of the
-Raspberry Pi system. The path:home/pi/2. Projects
+You can move the code anywhere. We save the code to the pi folder of the Raspberry Pi system. The path:home/pi/2. Projects
 
 ![](/media/ae27830403a2f741aa9b725e5324c215.png)
 
-Open“Thonny”, click“This computer”→“home”→“pi”→“2. Projects”→“Project
-24：Night Lamp”. And double left-click
-the“Project\_24.1\_Read\_Photosensitive\_Analog\_Value.py”.
+Open“Thonny”, click“This computer”→“home”→“pi”→“2. Projects”→“Project 24：Night Lamp”. And double left-click the “Project\_24.1\_Read\_Photosensitive\_Analog\_Value.py”.
 
 ![](/media/d97ee01c83aa9cd39da8fe42580614b5.png)
 
@@ -114,18 +91,11 @@ the“Project\_24.1\_Read\_Photosensitive\_Analog\_Value.py”.
 </tbody>
 </table>
 
-Ensure that the Raspberry Pi Pico is connected to the
-computer，click“![](/media/ec00367ea605788eab454cd176b94c7b.png)Stop/Restart backend”.
+Ensure that the Raspberry Pi Pico is connected to the computer，click“![](/media/ec00367ea605788eab454cd176b94c7b.png)Stop/Restart backend”.
 
 ![](/media/96ed707533887ade4a65e0df7b460eae.png)
 
-Click ![](/media/bb4d9305714a178069d277b20e0934b7.png)“Run current script”, the code starts
-executing, we will see that the "Shell" window of Thonny IDE will print
-the analog value read by the photoresistor. When the light intensity
-around the photoresistor is gradually reduced, the analog value will
-gradually increase. On the contrary, the analog value decreases
-gradually. Click“![](/media/ec00367ea605788eab454cd176b94c7b.png)Stop/Restart backend”to exit the
-program.
+Click ![](/media/bb4d9305714a178069d277b20e0934b7.png)“Run current script”, the code starts executing, we will see that the "Shell" window of Thonny IDE will print the analog value read by the photoresistor. When the light intensity around the photoresistor is gradually reduced, the analog value will gradually increase. On the contrary, the analog value decreases gradually. Click“![](/media/ec00367ea605788eab454cd176b94c7b.png)Stop/Restart backend”to exit the program.
 
 ![](/media/6df70dafea54c3d7a73e18c8e03f86d4.png)
 
@@ -133,26 +103,17 @@ program.
 
 5.  **Circuit Diagram and Wiring Diagram**
 
-We made a little dimmer in the front, now let's make a light controlled
-lamp. The principle is the same, the Raspberry Pi Pico will be used to
-obtain the analog value of the sensor and then adjust the brightness of
-the LED.  
+We made a little dimmer in the front, now let's make a light controlled lamp. The principle is the same, the Raspberry Pi Pico will be used to obtain the analog value of the sensor and then adjust the brightness of the LED.  
 
 ![](/media/b8e8d95bdc869bf76465fa73645db831.png)
 
 ![](/media/71f2886dc6fa97d02e2ecd0d429af71b.png)
 
-6.  **Text Code**
+6.  **Test Code**
 
-The code used in this project is saved in the file KS3020 Keyestudio
-Raspberry Pi Pico Learning Kit Ultimate Edition\\3. Raspberry Pi
-System\\Python\_Tutorial\\2. Projects\\Project 24：Night Lamp. You can
-move the code anywhere. We save the code to the pi folder of the
-Raspberry Pi system. The path:home/pi/2. Projects
+The code used in this project is saved in the file KS3020 Keyestudio Raspberry Pi Pico Learning Kit Ultimate Edition\\3. Raspberry Pi System\\Python\_Tutorial\\2. Projects\\Project 24：Night Lamp. You can move the code anywhere. We save the code to the pi folder of the Raspberry Pi system. The path:home/pi/2. Projects
 
-Open“Thonny”, click“This computer”→“D:”→“2. Python Projects”→“Project
-24：Night Lamp”. And double left-click
-the“Project\_24.2\_Night\_Lamp.py”.
+Open“Thonny”, click“This computer”→“D:”→“2. Python Projects”→“Project 24：Night Lamp”. And double left-click the“Project\_24.2\_Night\_Lamp.py”.
 
 ![](/media/ae27830403a2f741aa9b725e5324c215.png)
 
@@ -177,17 +138,12 @@ the“Project\_24.2\_Night\_Lamp.py”.
 </tbody>
 </table>
 
-7.  **Text Result**
+7.  **Test Result**
     
-    Ensure that the Raspberry Pi Pico is connected to the
-    computer，click“![](/media/ec00367ea605788eab454cd176b94c7b.png)Stop/Restart backend”.
+Ensure that the Raspberry Pi Pico is connected to the computer，click“![](/media/ec00367ea605788eab454cd176b94c7b.png)Stop/Restart backend”.
     
-    ![](/media/8ee7742359fdbb9f8ea9d47aaccf4abd.png)
+![](/media/8ee7742359fdbb9f8ea9d47aaccf4abd.png)
     
-    Click ![](/media/bb4d9305714a178069d277b20e0934b7.png)“Run current script”, the code starts
-    executing, we will see that when the intensity of light around the
-    photoresistor is reduced, the LED will be bright, on the contraty,
-    the LED will be dim. Click“![](/media/ec00367ea605788eab454cd176b94c7b.png)Stop/Restart
-    backend”to exit the program.
+Click ![](/media/bb4d9305714a178069d277b20e0934b7.png)“Run current script”, the code starts executing, we will see that when the intensity of light around the photoresistor is reduced, the LED will be bright, on the contraty, the LED will be dim. Click“![](/media/ec00367ea605788eab454cd176b94c7b.png)Stop/Restart backend”to exit the program.
 
 ![](/media/6b71892be4c0326147cf47bcbe84340a.png)

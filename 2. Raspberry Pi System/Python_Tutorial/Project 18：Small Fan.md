@@ -2,9 +2,7 @@
 
 1.  **Introduction**
 
-In the hot summer, we need an electric fan to cool us down, so in this
-project, we will use a Raspberry Pi Pico to control 130 motor module and
-small blade to make a small fan.
+In the hot summer, we need an electric fan to cool us down, so in this project, we will use a Raspberry Pi Pico to control 130 motor module and small blade to make a small fan.
 
 2.  **Components Required**
 
@@ -37,13 +35,7 @@ small blade to make a small fan.
 
 ![](/media/a572bcde7a5e3bf01d273b3d9a024701.png)
 
-130 motor module: The motor control module uses the HR1124S motor
-control chip, which is a single-channel H-bridge driver chip for DC
-motor. The H-bridge driving part of the HR1124S features low
-on-resistance PMOS and NMOS power tube. The low on-resistance ensures
-low power loss of the chip, making the chip work safely for a longer
-time. In addition, HR1124S has low standby current and low quiescent
-current, which makes HR1124S easy to be used in toy scheme.
+130 motor module: The motor control module uses the HR1124S motor control chip, which is a single-channel H-bridge driver chip for DC motor. The H-bridge driving part of the HR1124S features low on-resistance PMOS and NMOS power tube. The low on-resistance ensures low power loss of the chip, making the chip work safely for a longer time. In addition, HR1124S has low standby current and low quiescent current, which makes HR1124S easy to be used in toy scheme.
 
 Features:
 
@@ -67,17 +59,14 @@ Working temperature: -10℃\~ +50℃
 
 5.  **Test Code**
 
-The code used in this project is saved in the file S3020 Keyestudio
-Raspberry Pi Pico Learning Kit Ultimate Edition\\3. Raspberry Pi
+The code used in this project is saved in the file S3020 Keyestudio Raspberry Pi Pico Learning Kit Ultimate Edition\\3. Raspberry Pi
 System\\Python\_Tutorial\\2. Projects\\Project 18：Small Fan.
 
-You can move the code anywhere. We save the code to the pi folder of the
-Raspberry Pi system. The path:home/pi/2. Projects
+You can move the code anywhere. We save the code to the pi folder of the Raspberry Pi system. The path:home/pi/2. Projects
 
 ![](/media/ae27830403a2f741aa9b725e5324c215.png)
 
-Open“Thonny”, click““This computer”→“home”→“pi”→“2. Projects”→“Project
-18: Small Fan”. And double-click the“Project\_18\_ Small\_Fan.py”.
+Open“Thonny”, click““This computer”→“home”→“pi”→“2. Projects”→“Project 18: Small Fan”. And double-click the“Project\_18\_ Small\_Fan.py”.
 
 ![](/media/3ae6011fd277fd283c51a2edc38f5af6.png)
 
@@ -112,18 +101,12 @@ Open“Thonny”, click““This computer”→“home”→“pi”→“2. Pr
 </tbody>
 </table>
 
-6.  **Text Result**
+6.  **Test Result**
     
-    Ensure that the Raspberry Pi Pico is connected to the
-    computer，click“![](/media/ec00367ea605788eab454cd176b94c7b.png)Stop/Restart backend”.
+Ensure that the Raspberry Pi Pico is connected to the computer，click“![](/media/ec00367ea605788eab454cd176b94c7b.png)Stop/Restart backend”.
 
 ![](/media/b8719ff8af67a604c56bb0d2ca526d1b.png)
 
-Click “![](/media/bb4d9305714a178069d277b20e0934b7.png)Run current script”, the code starts
-executing, we will see that The small fan turns counterclockwise for 5
-seconds and stops for 2 seconds, and then turns clockwise for 5 seconds
-and stops for 2 seconds. Repeat this rule for 5 times and then the small
-fan stops. Click“![](/media/ec00367ea605788eab454cd176b94c7b.png)Stop/Restart backend”to exit the
-program.
+Click “![](/media/bb4d9305714a178069d277b20e0934b7.png)Run current script”, the code starts executing, we will see that The small fan turns counterclockwise for 5 seconds and stops for 2 seconds, and then turns clockwise for 5 seconds and stops for 2 seconds. Repeat this rule for 5 times and then the small fan stops. Click“![](/media/ec00367ea605788eab454cd176b94c7b.png)Stop/Restart backend”to exit the program.
 
 ![](/media/67a1f00e73daef1dc40651d871597b74.png)

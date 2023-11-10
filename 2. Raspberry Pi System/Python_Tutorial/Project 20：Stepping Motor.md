@@ -1,10 +1,7 @@
 # Project 20：Stepping Motor
 1.  **Introduction**
 
-Stepping motors are accurately positioned and are the most important
-components in industrial robots, 3D printers, large lathes, and other
-mechanical devices. In this project, we will use a Raspberry Pi Pico to
-control the ULN2003 stepper motor drive board to make the motors rotate.
+Stepping motors are accurately positioned and are the most important components in industrial robots, 3D printers, large lathes, and other mechanical devices. In this project, we will use a Raspberry Pi Pico to control the ULN2003 stepper motor drive board to make the motors rotate.
 
 2.  **Components Required**
 
@@ -37,94 +34,53 @@ control the ULN2003 stepper motor drive board to make the motors rotate.
 
 3.  **Component Knowledge**
     
-    ![](/media/8ebb14a35091dc8d02d95cb6748dd1e9.png)
+![](/media/8ebb14a35091dc8d02d95cb6748dd1e9.png)
 
-**Stepper motor:** It is a motor controlled by a series of
-electromagnetic coils. It can rotate by the exact number of degrees (or
-steps) needed, allowing you to move it to a precise position and keep it
-there. It does this by supplying power to the coil inside the motor in a
-very short time, but you must always supply power to the motor to keep
-it in the position you want. There are two basic types of stepping
-motors, namely unipolar stepping motor and bipolar stepping motor. In
-this project, we use a 28-BYJ48 unipolar stepper motor.
+**Stepper motor:** It is a motor controlled by a series of electromagnetic coils. It can rotate by the exact number of degrees (or steps) needed, allowing you to move it to a precise position and keep it there. It does this by supplying power to the coil inside the motor in a very short time, but you must always supply power to the motor to keep it in the position you want. There are two basic types of stepping motors, namely unipolar stepping motor and bipolar stepping motor. In this project, we use a 28-BYJ48 unipolar stepper motor.
 
 ![](/media/bea0e202b7bfe23d1fdcdbbe996aa6da.jpeg)
 
 **Working Principle:**
 
-The stepper motor is mainly composed of a stator and a rotor. The stator
-is fixed. As shown in the figure below, the part of the coil group A, B,
-C, and D will generate a magnetic field when the coil group is
-energized. The rotor is the rotating part. As follows, the middle part
-of the stator, two poles are permanent magnets.
+The stepper motor is mainly composed of a stator and a rotor. The stator is fixed. As shown in the figure below, the part of the coil group A, B, C, and D will generate a magnetic field when the coil group is energized. The rotor is the rotating part. As follows, the middle part of the stator, two poles are permanent magnets.
 
 ![](/media/32748e0804b1fff434181cb228b23242.png)
 
-Single -phase four beat: At the beginning, the coils of group A are
-turned on, and the poles of the rotor point at A coil. Next, the group A
-coil are disconnected, and the group B coils are turned on. The rotor
-will turn clockwise to the group B. Then, group B is disconnected, group
-C is turned on, and the rotor is turned to group C. After that, group C
-is disconnected, and group D is turned on, and the rotor is turned to
-group D. Finally, group D is disconnected, group A is turned on, and the
-rotor is turned to group A coils. Therefore, rotor turns 180° and
-continuously rotates B-C-D-A, which means it runs a circle (eight
-phase). As shown below, he rotation principle of stepper motor is A - B
-- C - D - A.
+Single -phase four beat: At the beginning, the coils of group A are turned on, and the poles of the rotor point at A coil. Next, the group A coil are disconnected, and the group B coils are turned on. The rotor will turn clockwise to the group B. Then, group B is disconnected, group C is turned on, and the rotor is turned to group C. After that, group C is disconnected, and group D is turned on, and the rotor is turned to group D. Finally, group D is disconnected, group A is turned on, and the rotor is turned to group A coils. Therefore, rotor turns 180° and continuously rotates B-C-D-A, which means it runs a circle (eight phase). As shown below, he rotation principle of stepper motor is A - B C - D - A.
 
-You make order inverse(D - C - B - A - D .....) if you want to make
-stepper motor rotate anticlockwise.
+You make order inverse(D - C - B - A - D .....) if you want to make stepper motor rotate anticlockwise.
 
 ![](/media/b8ae50bbdee2dd5bc683e8c450baee6a.png)
 
-Half-phase and eight beat: 8 beat adopts single and dual beat way，A - AB
-- B - BC - C - CD - D - DA - A ...... ，rotor will rotate half phase in
-this order. For example, when A coil is electrified，rotor faces to A
-coil , then A and B coil are connected, on this condition, the strongest
-magnetic field produced lies in the central part of AB coil, which means
-rotating half-phase clockwise.
+Half-phase and eight beat: 8 beat adopts single and dual beat way，A - AB B - BC - C - CD - D - DA - A ...... ，rotor will rotate half phase in this order. For example, when A coil is electrified，rotor faces to A coil , then A and B coil are connected, on this condition, the strongest magnetic field produced lies in the central part of AB coil, which means rotating half-phase clockwise.
 
 **Stepper Motor Parameters:**
 
-The rotor rotates one circle when the stepper motor we provide rotates
-32 phases and with the output shaft driven by 1:64 reduction geared set.
-Therefore the rotation (a circle) of output shaft requires 32 \* 64 =
-2048 phases.
+The rotor rotates one circle when the stepper motor we provide rotates 32 phases and with the output shaft driven by 1:64 reduction geared set. Therefore the rotation (a circle) of output shaft requires 32 \* 64 = 2048 phases.
 
-The step angle of 4-beat mode of 5V and 4-phase stepper motor is 11.25.
-And the step angle of 8-beat mode is 5.625, the reduction ratio is 1:64.
+The step angle of 4-beat mode of 5V and 4-phase stepper motor is 11.25. And the step angle of 8-beat mode is 5.625, the reduction ratio is 1:64.
 
-**ULN2003Stepper Motor Drive Board:** It is a stepper motor driver,
-which converts the weak signal into a stronger control signal to drive
-the stepper motor. 
+**ULN2003Stepper Motor Drive Board:** It is a stepper motor driver, which converts the weak signal into a stronger control signal to drive the stepper motor. 
 
-The following schematic diagram shows how to use the ULN2003 stepper
-motor driver board interface to connect a unipolar stepper motor to the
-pins of the Raspberry Pi Pico, and shows how to use four TIP120
-interfaces.
+The following schematic diagram shows how to use the ULN2003 stepper motor driver board interface to connect a unipolar stepper motor to the pins of the Raspberry Pi Pico, and shows how to use four TIP120 interfaces.
 
 ![](/media/6fa632d2b70e97dd55565d23ec15d245.png)
 
 4.  **Schematic Diagram and Wiring Diagram:**
     
-    ![](/media/ba02656bb1cb44ce8edb187a10dc7bef.png)
+![](/media/ba02656bb1cb44ce8edb187a10dc7bef.png)
 
 ![](/media/6f72f7b5f6a520099d7714236372a9fe.png)
 
-**5.Text Code**
+**5.Test Code**
 
-The code used in this project is saved in the file KS3020 Keyestudio
-Raspberry Pi Pico Learning Kit Ultimate Edition\\3. Raspberry Pi
-System\\Python\_Tutorial\\2. Projects\\Project 20：Stepping Motor.
+The code used in this project is saved in the file KS3020 Keyestudio Raspberry Pi Pico Learning Kit Ultimate Edition\\3. Raspberry Pi System\\Python\_Tutorial\\2. Projects\\Project 20：Stepping Motor.
 
-You can move the code anywhere. We save the code to the pi folder of the
-Raspberry Pi system. The path: home/pi/2. Projects
+You can move the code anywhere. We save the code to the pi folder of the Raspberry Pi system. The path: home/pi/2. Projects
 
 ![](/media/ae27830403a2f741aa9b725e5324c215.png)
 
-Open“Thonny”, click““This computer”→“home”→“pi”→“2. Projects”→”Project
-20：Stepping Motor”. And double-click
-the“Project\_20\_Stepping\_Motor.py”.
+Open“Thonny”, click““This computer”→“home”→“pi”→“2. Projects”→”Project 20：Stepping Motor”. And double-click the “Project\_20\_Stepping\_Motor.py”.
 
 ![](/media/c7c8462a4f2a88008201f51104f12ba5.png)
 
@@ -188,15 +144,12 @@ the“Project\_20\_Stepping\_Motor.py”.
 
 6.  **Test Result**
     
-    Ensure that the Raspberry Pi Pico is connected to the
-    computer，click“![](/media/ec00367ea605788eab454cd176b94c7b.png)Stop/Restart backend”.
+Ensure that the Raspberry Pi Pico is connected to the computer，click“![](/media/ec00367ea605788eab454cd176b94c7b.png)Stop/Restart backend”.
 
 ![](/media/25f6339ca30f946b54fb1f6702f113f1.png)
 
-Click“![](/media/bb4d9305714a178069d277b20e0934b7.png)Run current script”, the code starts
-executing, we will see that the four LEDS ( D1,D2,D3 ,D4) on the ULN2003
-drive module will light up. The stepper motor rotates clockwise first,
-then counterclockwise, and keeps this state circulating.
+Click“![](/media/bb4d9305714a178069d277b20e0934b7.png)Run current script”, the code starts executing, we will see that the four LEDS ( D1,D2,D3 ,D4) on the ULN2003 drive module will light up. The stepper motor rotates clockwise first, then counterclockwise, and keeps this state circulating.
+
 Click“![](/media/ec00367ea605788eab454cd176b94c7b.png)Stop/Restart backend”to exit the program.
 
 ![](/media/7e557dab9aaafac28b4e91f5308b35ab.png)

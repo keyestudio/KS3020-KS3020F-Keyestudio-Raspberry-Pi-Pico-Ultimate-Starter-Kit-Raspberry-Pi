@@ -2,16 +2,8 @@
 
 1.  **Introduction**
     
-    In previous projects, we have learned how to light an LED.  However,
-    how to light up a lot of LEDs with only 26 I/O ports on the
-    Raspberry Pi Pico? Sometimes we may run out of pins , at that time,
-    we need to extend it with the shift register. You can use a 74HC595N
-    chip to control up to eight outputs at a time, using only a few pins
-    on your microcontroller. In addition, You can also connect multiple
-    registers together to further expand the output. In this project, we
-    will use a Raspberry Pi Pico, a 74HC595 chip and LEDs to make a
-    flowing water light to understand the function of the chip.  
-
+In previous projects, we have learned how to light an LED. However, how to light up a lot of LEDs with only 26 I/O ports on the Raspberry Pi Pico? Sometimes we may run out of pins , at that time, we need to extend it with the shift register. You can use a 74HC595N chip to control up to eight outputs at a time, using only a few pins on your microcontroller. In addition, You can also connect multiple registers together to further expand the output. In this project, we will use a Raspberry Pi Pico, a 74HC595 chip and LEDs to make a flowing water light to understand the function of the chip.  
+    
 2.  **Components Required**
 
 <table>
@@ -45,20 +37,12 @@
 
 3.  **Component Knowledge**
     
-    ![](/media/6921c6d60135e072ed4bd24564ec4a6d.png)
+![](/media/6921c6d60135e072ed4bd24564ec4a6d.png)
 
-**74HC595N Chip:** To put it simply, 74HC595N chip is a combination of
-8-digit shifting register, memorizer and equipped with tri-state output.
-The shift register and the memorizer are synchronized to different
-clocks, and the data is input on the rising edge of the shift register
-clock SCK and goes into the memory register on the rising edge of the
-memory register clock RCK. If the two clocks are connected together, the
-shift register is always one pulse earlier than the storage register.
-The shift register has a serial shift input (SI) and a serial output
-(SQH) for cascading. The 8-bit shift register can be reset
-asynchronously (low-level reset), and the storage register has an 8-bit
-Three-state parallel bus output, when the output enable (OE) is enabled
-(active low), the storage register is output to the 74HC595N pin (bus).
+**74HC595N Chip:** To put it simply, 74HC595N chip is a combination of 8-digit shifting register, memorizer and equipped with tri-state output. The shift register and the memorizer are synchronized to different clocks, and the data is input on the rising edge of the shift register clock SCK and goes into the memory register on the rising edge of the memory register clock RCK. If the two clocks are connected together, the shift register is always one pulse earlier than the storage register.
+
+The shift register has a serial shift input (SI) and a serial output(SQH) for cascading. The 8-bit shift register can be reset
+asynchronously (low-level reset), and the storage register has an 8-bit Three-state parallel bus output, when the output enable (OE) is enabled(active low), the storage register is output to the 74HC595N pin (bus).
 
 ![](/media/858b189f06ad68afe051b15043b2affd.png)
 
@@ -101,8 +85,7 @@ Three-state parallel bus output, when the output enable (OE) is enabled
 
 ![](/media/1738cecf584c83b55370153ebc1688b7.png)
 
-Note: Pay attention to the direction in which the 74HC595N chip is
-inserted.
+Note: Pay attention to the direction in which the 74HC595N chip is inserted.
 
 ![](/media/a6d03617539b70d6d69fa7e9acb25be9.png)
 
@@ -110,19 +93,11 @@ inserted.
 
 5.  **Test Code**
 
-The code used in this project is saved in the file KS3020 Keyestudio
-Raspberry Pi Pico Learning Kit Ultimate Edition\\3. Raspberry Pi
-System\\Python\_Tutorial\\2. Projects\\Project 11：74HC595N Control 8
-LEDs. You can move the code to anywhere.For example, we save it in the
-pi folder of the Raspberry Pi system, the route is home/pi/2. Projects.
+The code used in this project is saved in the file KS3020 Keyestudio Raspberry Pi Pico Learning Kit Ultimate Edition\\3. Raspberry Pi System\\Python\_Tutorial\\2. Projects\\Project 11：74HC595N Control 8 LEDs. You can move the code to anywhere.For example, we save it in the pi folder of the Raspberry Pi system, the route is home/pi/2. Projects.
 
 ![](/media/ae27830403a2f741aa9b725e5324c215.png)
 
-Open“Thonny”, click“This computer”→“home”→“pi”→“2. Projects”→“Project
-11：74HC595N Control 8 LEDs”. Select“my74HC595.py”, right-click and
-select“Upload to /”，wait for“my74HC595.py”to be uploaded to the
-Raspberry Pi Pico. And double-click
-the“Project\_11\_74HC595N\_Controls\_8\_LEDs.py”.
+Open“Thonny”, click“This computer”→“home”→“pi”→“2. Projects”→“Project 11：74HC595N Control 8 LEDs”. Select“my74HC595.py”, right-click and select“Upload to /”，wait for“my74HC595.py”to be uploaded to the Raspberry Pi Pico. And double-click the“Project\_11\_74HC595N\_Controls\_8\_LEDs.py”.
 
 ![](/media/2ac6ee416569798a1c50a9d0f3da0cb2.png)
 
@@ -156,14 +131,10 @@ the“Project\_11\_74HC595N\_Controls\_8\_LEDs.py”.
 
 6.  **Test Result**
     
-    Ensure that the Raspberry Pi Pico is connected to the
-    computer，click“![](/media/ec00367ea605788eab454cd176b94c7b.png)Stop/Restart backend”.
+Ensure that the Raspberry Pi Pico is connected to the computer，click“![](/media/ec00367ea605788eab454cd176b94c7b.png)Stop/Restart backend”.
 
 ![](/media/c1b73a6a1a33fc7af94b5487703125d7.png)
 
-Click ![](/media/bb4d9305714a178069d277b20e0934b7.png)“Run current script”, the code starts
-executing, we will see that the 8 LEDs start flashing in flowing water
-mode. Press“Ctrl+C”or click![](/media/ec00367ea605788eab454cd176b94c7b.png)“Stop/Restart
-backend”to exit the program.
+Click ![](/media/bb4d9305714a178069d277b20e0934b7.png)“Run current script”, the code starts executing, we will see that the 8 LEDs start flashing in flowing water mode. Press“Ctrl+C”or click![](/media/ec00367ea605788eab454cd176b94c7b.png)“Stop/Restart backend”to exit the program.
 
 ![](/media/a8284225cd537ee03f3c8ae031f4213b.png)

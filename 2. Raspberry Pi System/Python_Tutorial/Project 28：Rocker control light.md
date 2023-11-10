@@ -2,13 +2,9 @@
 
 1.  **Introduction**
 
-The joystick module is a component with two analog inputs and one
-digital input. It is widely used in game operation, robot control, drone
-control and other fields.
+The joystick module is a component with two analog inputs and one digital input. It is widely used in game operation, robot control, drone control and other fields.
 
-In this project, we will use a Raspberry Pi Pico and a joystick module
-to control RGB. You can have a deeper understanding of the principle and
-operation of the joystick module in practice.
+In this project, we will use a Raspberry Pi Pico and a joystick module to control RGB. You can have a deeper understanding of the principle and operation of the joystick module in practice.
 
 2.  **Components Required**
 
@@ -55,31 +51,12 @@ operation of the joystick module in practice.
 
 ![](/media/d087b123748cbfb8ed9f517150db71c5.png)
 
-**Joystick module**: It mainly uses PS2 joystick components. In fact,
-the joystick module has 3 signal terminal pins, which simulate a
-three-dimensional space. The pins of the joystick module are GND, VCC,
-and signal terminals (B, X, Y). The signal terminals X and Y simulate
-the X-axis and Y-axis of the space. When controlling, the X and Y signal
-terminals of the module are connected to the analog port of the
-microcontroller. The signal terminal B simulates the Z axis of the
-space, it is generally connected to the digital port and used as a
-button.
+**Joystick module**: It mainly uses PS2 joystick components. In fact, the joystick module has 3 signal terminal pins, which simulate a three-dimensional space. The pins of the joystick module are GND, VCC, and signal terminals (B, X, Y). The signal terminals X and Y simulate the X-axis and Y-axis of the space. When controlling, the X and Y signal terminals of the module are connected to the analog port of the microcontroller. The signal terminal B simulates the Z axis of the space, it is generally connected to the digital port and used as a button.
 
-VCC is connected to the microcontroller power output VCC (3.3V or 5V),
-GND is connected to the microcontroller GND, the voltage in the original
-state is about 1.65V or 2.5V. In the X-axis direction, when moving in
-the direction of the arrow, the voltage value increases, and the maximum
-voltage can be reached. Moving in the opposite direction of the arrow,
-the voltage value gradually decreases to the minimum voltage. In the
-Y-axis direction, the voltage value decreases gradually as it moves in
-the direction of the arrow on the module, decreasing to the minimum
-voltage. As the arrow is moved in the opposite direction, the voltage
-value increases and can reach the maximum voltage. In the Z-axis
-direction, the signal terminal B is connected to the digital port and
-outputs 0 in the original state and outputs 1 when pressed. In this way,
-we can read the two analog values and the high and low level conditions
-of the digital port to determine the operating status of the joystick on
-the module.
+VCC is connected to the microcontroller power output VCC (3.3V or 5V), GND is connected to the microcontroller GND, the voltage in the original state is about 1.65V or 2.5V. In the X-axis direction, when moving in the direction of the arrow, the voltage value increases, and the maximum voltage can be reached. Moving in the opposite direction of the arrow, the voltage value gradually decreases to the minimum voltage. In the Y-axis direction, the voltage value decreases gradually as it moves in the direction of the arrow on the module, decreasing to the minimum voltage. 
+
+As the arrow is moved in the opposite direction, the voltage value increases and can reach the maximum voltage. In the Z-axis
+direction, the signal terminal B is connected to the digital port and outputs 0 in the original state and outputs 1 when pressed. In this way, we can read the two analog values and the high and low level conditions of the digital port to determine the operating status of the joystick on the module.
 
 **Features:**
 
@@ -87,35 +64,23 @@ Input Voltage：DC 3.3V \~ 5V
 
 Output Signal：X/Y dual axis analog value +Z axis digital signal
 
-[Range](javascript:;) [of](javascript:;) [Application](javascript:;)：Suitable
-for control point coordinate movement in plane as well as control of two
-degrees of freedom steering gear, etc.  
+[Range](javascript:;) [of](javascript:;) [Application](javascript:;)：Suitable for control point coordinate movement in plane as well as control of two degrees of freedom steering gear, etc.  
 
-[product](javascript:;) [feature](javascript:;)s：Exquisite appearance,
-joystick feel superior, simple operation, sensitive response, long
-service life.  
+[Product](javascript:;) [feature](javascript:;)s：Exquisite appearance, joystick feel superior, simple operation, sensitive response, long service life.  
 
 4.  **Read the Value**
 
-We have to use analog Raspberry Pi Pico pin IO to read the data from X
-or Y pins, and use digital IO port to read the values of the button.
-Please follow the wiring diagram below for wiring.
+We have to use analog Raspberry Pi Pico pin IO to read the data from X or Y pins, and use digital IO port to read the values of the button. Please follow the wiring diagram below for wiring.
 
 ![](/media/36004a41553a2f413ba05775e9b696eb.png)
 
 ![](/media/b843cdff62b3ccf3f3f028a834b468aa.png)
 
-The code used in this project is saved in the file KS3020 Keyestudio
-Raspberry Pi Pico Learning Kit Ultimate Edition\\3. Raspberry Pi
-System\\Python\_Tutorial\\2. Projects\\Project 28：Rocker control light.
-You can move the code anywhere. We save the code to the pi folder of the
-Raspberry Pi system. The path:home/pi/2. Projects
+The code used in this project is saved in the file KS3020 Keyestudio Raspberry Pi Pico Learning Kit Ultimate Edition\\3. Raspberry Pi System\\Python\_Tutorial\\2. Projects\\Project 28：Rocker control light. You can move the code anywhere. We save the code to the pi folder of the Raspberry Pi system. The path:home/pi/2. Projects
 
 ![](/media/ae27830403a2f741aa9b725e5324c215.png)
 
-Open“Thonny”, click“This computer”→“home”→“pi”→“2. Projects”→“Project
-28：Rocker control light”. And double left-click
-the“Project\_28.1\_Read\_Rocker\_Value.py”.
+Open“Thonny”, click“This computer”→“home”→“pi”→“2. Projects”→“Project 28：Rocker control light”. And double left-click the “Project\_28.1\_Read\_Rocker\_Value.py”.
 
 ![](/media/8a76bb8e2c4b5e146f39241dc0c2d64a.png)
 
@@ -153,17 +118,11 @@ the“Project\_28.1\_Read\_Rocker\_Value.py”.
 </tbody>
 </table>
 
-Ensure that the Raspberry Pi Pico is connected to the
-computer，click“![](/media/ec00367ea605788eab454cd176b94c7b.png)Stop/Restart backend”.
+Ensure that the Raspberry Pi Pico is connected to the computer，click“![](/media/ec00367ea605788eab454cd176b94c7b.png)Stop/Restart backend”.
 
 ![](/media/e42d431beb8c38c1d9edfc8dd4835497.png)
 
-Click ![](/media/bb4d9305714a178069d277b20e0934b7.png)“Run current script”, the code starts
-executing, we will see that the "Shell" window of Thonny IDE will print
-the analog and digital values of the current joystick. Moving the
-joystick or pressing it will change the analog and digital values in
-"Shell". Click“![](/media/ec00367ea605788eab454cd176b94c7b.png)Stop/Restart backend”to exit the
-program.
+Click ![](/media/bb4d9305714a178069d277b20e0934b7.png)“Run current script”, the code starts executing, we will see that the "Shell" window of Thonny IDE will print the analog and digital values of the current joystick. Moving the joystick or pressing it will change the analog and digital values in "Shell". Click“![](/media/ec00367ea605788eab454cd176b94c7b.png)Stop/Restart backend”to exit the program.
 
 ![](/media/6310b5d15613eca68f193ff996e0fc48.png)
 
@@ -173,27 +132,20 @@ program.
 
 5.  **Circuit Diagram and Wiring Diagram**
 
-We just read the value of the joystick module. Now we need to do
-something with the joystick module and RGB, connecting according to the
-following diagram.
+We just read the value of the joystick module. Now we need to do something with the joystick module and RGB, connecting according to the following diagram.
 
 ![](/media/000ec2c5dae0b0d5368569abbd026f35.png)
 
 ![](/media/68601044f75ee6840f0b97cad9bea891.png)
 
-6.  **Text Code**
+6.  **Test Code**
 
-The code used in this project is saved in the file KS3020 Keyestudio
-Raspberry Pi Pico Learning Kit Ultimate Edition\\3. Raspberry Pi
-System\\Python\_Tutorial\\2. Projects\\Project 28：Rocker control light.
-You can move the code anywhere. We save the code to the pi folder of the
-Raspberry Pi system. The path:home/pi/2. Projects
+The code used in this project is saved in the file KS3020 Keyestudio Raspberry Pi Pico Learning Kit Ultimate Edition\\3. Raspberry Pi System\\Python\_Tutorial\\2. Projects\\Project 28：Rocker control light. You can move the code anywhere. We save the code to the pi folder of the Raspberry Pi system. The path:home/pi/2. Projects
 
 ![](/media/ae27830403a2f741aa9b725e5324c215.png)
 
-Open“Thonny”, click “This computer”→“home”→“pi”→“2. Projects”→“Project
-28：Rocker control light”. And double left-click
-the“Project\_28.2\_Rocker\_Control\_Light.py”.
+Open“Thonny”, click “This computer”→“home”→“pi”→“2. Projects”→“Project 28：Rocker control light”. And double left-click
+the “Project\_28.2\_Rocker\_Control\_Light.py”.
 
 ![](/media/a8d0765b4b6499868b8c135962e70fda.png)
 
@@ -238,21 +190,13 @@ the“Project\_28.2\_Rocker\_Control\_Light.py”.
 </tbody>
 </table>
 
-7.  **Text Result**
+7.  **Test Result**
     
-    Ensure that the Raspberry Pi Pico is connected to the
-    computer，click“![](/media/ec00367ea605788eab454cd176b94c7b.png)Stop/Restart backend”.
+Ensure that the Raspberry Pi Pico is connected to the computer，click“![](/media/ec00367ea605788eab454cd176b94c7b.png)Stop/Restart backend”.
 
 ![](/media/4bce4d98a3b7e171a0e93b5b27c18be6.png)
 
-Click ![](/media/bb4d9305714a178069d277b20e0934b7.png)“Run current script”, the code starts
-executing, we will see that①If the joystick is moved to the far left in
-the X direction, the RGB light turns red. ② If the joystick is moved to
-the far right in the X direction, the RGB light turns green. ③If the
-joystick is moved to the top in the Y direction, the RGB light turns
-white. ④If the joystick is moved to the bottom in the Y direction, the
-RGB light turns blue. Press“Ctrl+C”or
-click“![](/media/ec00367ea605788eab454cd176b94c7b.png)Stop/Restart backend”to exit the program.
+Click ![](/media/bb4d9305714a178069d277b20e0934b7.png)“Run current script”, the code starts executing, we will see that①If the joystick is moved to the far left in the X direction, the RGB light turns red. ② If the joystick is moved to the far right in the X direction, the RGB light turns green. ③If the joystick is moved to the top in the Y direction, the RGB light turns white. ④If the joystick is moved to the bottom in the Y direction, the RGB light turns blue. Press“Ctrl+C”or click“![](/media/ec00367ea605788eab454cd176b94c7b.png)Stop/Restart backend”to exit the program.
 
 ![](/media/67825ce03c80a9d2111608b8676181a4.png)
 

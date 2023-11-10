@@ -2,14 +2,8 @@
 
 1.  **Introduction**
     
-    In common digital button sensors, one button uses an IO port .
-    However, sometimes it will occupy several IO ports when we need a
-    lot of buttons . In order to save the use of IO ports, we are
-    supposed to make a plurality of buttons into a matrix type, through
-    the control of lines to achieve less IO port control the multiple
-    buttons. In this project, we will learn a Raspberry Pi Pico and a
-    4\*4 membrane matrix keyboard control a servo and a buzzer.   
-
+In common digital button sensors, one button uses an IO port. However, sometimes it will occupy several IO ports when we need a lot of buttons . In order to save the use of IO ports, we are supposed to make a plurality of buttons into a matrix type, through the control of lines to achieve less IO port control the multiple buttons. In this project, we will learn a Raspberry Pi Pico and a 4\*4 membrane matrix keyboard control a servo and a buzzer.   
+    
 2.  **Components Required**
 
 <table>
@@ -43,49 +37,29 @@
 
 3.  **Component Knowledge**
     
-    **4\*4 Matrix keyboard:**The keyboard is a device that integrates
-    many keys. As shown in the figure below, a 4x4 keyboard integrates
-    16 keys.
+**4\*4 Matrix keyboard:**The keyboard is a device that integrates many keys. As shown in the figure below, a 4x4 keyboard integrates 16 keys.
     
-    ![](/media/fcd187eb009098d691927511606c991b.jpeg)
+![](/media/fcd187eb009098d691927511606c991b.jpeg)
     
-    As with the LED matrix integration, in the 4x4 keyboard, each row of
-    keys is connected to a pin, each column of keys is the same. This
-    connection reduces the use of processor ports. The internal circuit
-    is shown below.
+As with the LED matrix integration, in the 4x4 keyboard, each row of keys is connected to a pin, each column of keys is the same. This connection reduces the use of processor ports. The internal circuit is shown below.
     
-    ![](/media/5ebdacba906622079e0ef41dc1ea3fdf.png)
+![](/media/5ebdacba906622079e0ef41dc1ea3fdf.png)
 
-You can use row scan or column scan methods to detect the state of the
-keys on each column or each line. Take the column scan method as an
-example. Send a low level to column 4 (Pin4), detect the state of rows
-1, 2, 3 and 4, and determine whether the A, B, C and D keys are pressed.
-Then send the low level to columns 3, 2, 1 in turn, and detect whether
-other keys are pressed. Then you can get the state of all keys.
+You can use row scan or column scan methods to detect the state of the keys on each column or each line. Take the column scan method as an example. Send a low level to column 4 (Pin4), detect the state of rows 1, 2, 3 and 4, and determine whether the A, B, C and D keys are pressed. Then send the low level to columns 3, 2, 1 in turn, and detect whether other keys are pressed. Then you can get the state of all keys.
 
 4.  **Read the Value**
     
-    We start with a simple code to read the values of the 4\*4 matrix
-    keyboard and print them in the serial monitor. Its wiring diagram is
-    shown below.
+We start with a simple code to read the values of the 4\*4 matrix keyboard and print them in the serial monitor. Its wiring diagram is shown below.
 
 ![](/media/a673f15964984f61170e2d7690e959c1.png)
 
 ![](/media/681be86e91946320131d4b11b12b77c2.png)
 
-The code used in this project is saved in the file KS3020 Keyestudio
-Raspberry Pi Pico Learning Kit Ultimate Edition\\3. Raspberry Pi
-System\\Python\_Tutorial\\2. Projects\\Project 33：Keypad Door. You can
-move the code anywhere. We save the code to the pi folder of the
-Raspberry Pi system. The path:home/pi/2. Projects
+The code used in this project is saved in the file KS3020 Keyestudio Raspberry Pi Pico Learning Kit Ultimate Edition\\3. Raspberry Pi System\\Python\_Tutorial\\2. Projects\\Project 33：Keypad Door. You can move the code anywhere. We save the code to the pi folder of the Raspberry Pi system. The path:home/pi/2. Projects
 
 ![](/media/ae27830403a2f741aa9b725e5324c215.png)
 
-Open“Thonny”, click““This computer”→“home”→“pi”→“2. Projects”→“Project
-33：Keypad Door”. Select“keypad.py”， right-click and select“Upload to
-/”，waiting for“keypad.py”to be uploaded to the Raspberry Pi Pico.
-And double left-click
-the“Project\_33.1\_4x4\_Matrix\_Keypad\_Display.py”.
+Open“Thonny”, click““This computer”→“home”→“pi”→“2. Projects”→“Project 33：Keypad Door”. Select“keypad.py”， right-click and select“Upload to/”，waiting for“keypad.py”to be uploaded to the Raspberry Pi Pico. And double left-click the “Project\_33.1\_4x4\_Matrix\_Keypad\_Display.py”.
 
 ![](/media/aed2193522c15181e0d9d6f17289d50c.png)
 
@@ -109,14 +83,11 @@ the“Project\_33.1\_4x4\_Matrix\_Keypad\_Display.py”.
 </tbody>
 </table>
 
-Ensure that the Raspberry Pi Pico is connected to the
-computer，click“![](/media/ec00367ea605788eab454cd176b94c7b.png)Stop/Restart backend”.
+Ensure that the Raspberry Pi Pico is connected to the computer，click“![](/media/ec00367ea605788eab454cd176b94c7b.png)Stop/Restart backend”.
 
 ![](/media/8841f93dbb1cf6462d84cdfeb170ba29.png)
 
-Click“![](/media/bb4d9305714a178069d277b20e0934b7.png)Run current script”, the code starts
-executing, we will see that press the keyboard and the "Shell" window of
-Thonny IDE will print the corresponding key value, as shown below.
+Click“![](/media/bb4d9305714a178069d277b20e0934b7.png)Run current script”, the code starts executing, we will see that press the keyboard and the "Shell" window of Thonny IDE will print the corresponding key value, as shown below.
 Click“![](/media/ec00367ea605788eab454cd176b94c7b.png)Stop/Restart backend”to exit the program.
 
 ![](/media/046f19e4e5f9262e114350efc5074d4b.png)
@@ -125,29 +96,20 @@ Click“![](/media/ec00367ea605788eab454cd176b94c7b.png)Stop/Restart backend”t
 
 5.  **Circuit Diagram and Wiring Diagram**
 
-In the last experiment, we have known the key values of the 4\*4 matrix
-keyboard. Next, we use it as the keyboard to control the servo and the
-buzzer.  
+In the last experiment, we have known the key values of the 4\*4 matrix keyboard. Next, we use it as the keyboard to control the servo and the buzzer.  
 
 ![](/media/f08b9ee128bc06300b3f8a05c73c2375.png)
 
 ![](/media/ccb5914d82d2b220e8a6afb944d13c54.png)
 
-6.  **Text Code**
+6.  **Test Code**
 
-The code used in this project is saved in the file KS3020 Keyestudio
-Raspberry Pi Pico Learning Kit Ultimate Edition\\3. Raspberry Pi
-System\\Python\_Tutorial\\2. Projects\\Project 33：Keypad Door. You can
-move the code anywhere. We save the code to the pi folder of the
-Raspberry Pi system. The path:home/pi/2. Projects
+The code used in this project is saved in the file KS3020 Keyestudio Raspberry Pi Pico Learning Kit Ultimate Edition\\3. Raspberry Pi System\\Python\_Tutorial\\2. Projects\\Project 33：Keypad Door. You can move the code anywhere. We save the code to the pi folder of the Raspberry Pi system. The path:home/pi/2. Projects
 
 ![](/media/ae27830403a2f741aa9b725e5324c215.png)
 
-Open“Thonny”, click“This computer”→“home”→“pi”→“2. Projects”→“Project
-33： Keypad Door”. Select“keypad.py”and“myservo.py”， right-click and
-select“Upload to /”，waiting for the “keypad.py”and“myservo.py”to be
-uploaded to the Raspberry Pi Pico. And double left-click
-the“Project\_33.2\_Keypad\_Door.py”.
+Open“Thonny”, click“This computer”→“home”→“pi”→“2. Projects”→“Project 33： Keypad Door”. Select“keypad.py”and“myservo.py”， right-click and select“Upload to /”，waiting for the “keypad.py”and“myservo.py”to be
+uploaded to the Raspberry Pi Pico. And double left-click the“Project\_33.2\_Keypad\_Door.py”.
 
 ![](/media/aed2193522c15181e0d9d6f17289d50c.png)
 
@@ -199,17 +161,11 @@ the“Project\_33.2\_Keypad\_Door.py”.
 
 7.  **Test Result**
     
-    Ensure that the Raspberry Pi Pico is connected to the
-    computer，click“![](/media/ec00367ea605788eab454cd176b94c7b.png)Stop/Restart backend”.
+Ensure that the Raspberry Pi Pico is connected to the computer，click“![](/media/ec00367ea605788eab454cd176b94c7b.png)Stop/Restart backend”.
 
 ![](/media/cbcc9a007c9148a7101f141b72a04aae.png)
 
-Click “![](/media/bb4d9305714a178069d277b20e0934b7.png)Run current script”, the code starts
-executing, we will see that press the keyboard to enter a four-character
-password. If the password is correct (correct password: 1234), the servo
-will turn at an angle and return to its original position. If the input
-is incorrect, an input error alert will be issued.
-Click“![](/media/ec00367ea605788eab454cd176b94c7b.png)Stop/Restart backend”to exit the program.
+Click “![](/media/bb4d9305714a178069d277b20e0934b7.png)Run current script”, the code starts executing, we will see that press the keyboard to enter a four-character password. If the password is correct (correct password: 1234), the servo will turn at an angle and return to its original position. If the input is incorrect, an input error alert will be issued. Click“![](/media/ec00367ea605788eab454cd176b94c7b.png)Stop/Restart backend”to exit the program.
 
 ![](/media/04ba047131a4b5e66bc234515c15beee.png)
 

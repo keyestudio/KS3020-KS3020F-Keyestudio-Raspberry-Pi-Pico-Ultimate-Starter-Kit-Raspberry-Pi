@@ -2,11 +2,7 @@
 
 1.  **Introduction**
 
-Traffic lights are closely related to people's daily lives, which
-generally show red, yellow, and green. Everyone should obey the traffic
-rules, which can avoid many traffic accidents. In this project, we will
-use Raspberry Pi Pico and some LEDs (red, green and yellow) to simulate
-the traffic lights.
+Traffic lights are closely related to people's daily lives, which generally show red, yellow, and green. Everyone should obey the traffic rules, which can avoid many traffic accidents. In this project, we will use Raspberry Pi Pico and some LEDs (red, green and yellow) to simulate the traffic lights.
 
 2.  **Components Required**
 
@@ -63,16 +59,11 @@ How to identify the 220Ω 5-band resistor
 
 4.  **Test Code**
 
-The code used in this project is saved in the file KS3020 Keyestudio
-Raspberry Pi Pico Learning Kit Ultimate Edition\\3. Raspberry Pi
-System\\Python\_Tutorial\\2. Projects\\Project 05:Traffic Lights. You
-can move the code to anywhere.For example, we save it in the oi folder
-of the Raspberry Pi system, the route is home/pi/2. Projects.
+The code used in this project is saved in the file KS3020 Keyestudio Raspberry Pi Pico Learning Kit Ultimate Edition\\3. Raspberry Pi System\\Python\_Tutorial\\2. Projects\\Project 05:Traffic Lights. You can move the code to anywhere.For example, we save it in the oi folder of the Raspberry Pi system, the route is home/pi/2. Projects.
 
 ![](/media/ae27830403a2f741aa9b725e5324c215.png)
 
-Open“Thonny, click“This computer”→“home”→“pi”→“2. Projects”→"Project 05:
-Traffic Lights”. And double-click“Project\_05\_Traffic\_Lights.py”.
+Open“Thonny, click“This computer”→“home”→“pi”→“2. Projects”→"Project 05: Traffic Lights”. And double-click“Project\_05\_Traffic\_Lights.py”.
 
 ![](/media/bb44b31699957a99ec3e33f7a887e1be.png)
 
@@ -107,15 +98,13 @@ Traffic Lights”. And double-click“Project\_05\_Traffic\_Lights.py”.
 </tbody>
 </table>
 
-**Test Result：**
+5. **Test Result：**
 
-Connect the pico board to the Raspberry Pi. Click
-![](/media/32e03e9d4211e9ef97c1d2b18f05c902.png)to check the Shell
+Connect the pico board to the Raspberry Pi. Click ![](/media/32e03e9d4211e9ef97c1d2b18f05c902.png)to check the Shell
 
 ![](/media/3691a51f61750b1dc918de0f771a5482.png)
 
-Click“![](/media/bb4d9305714a178069d277b20e0934b7.png)”, the code starts executing, what we will
-see are below:
+Click“![](/media/bb4d9305714a178069d277b20e0934b7.png)”, the code starts executing, what we will see are below:
 
 1.  First, the green light will be on for 5 seconds and then off; 
 
@@ -123,7 +112,6 @@ see are below:
 
 3.  Then, the red light goes on for five seconds and then goes off. 
     
-    Repeat steps 1 to 3 above and press“Ctrl+C”or
-    click“![](/media/ec00367ea605788eab454cd176b94c7b.png)” to exit the program.
+Repeat steps 1 to 3 above and press“Ctrl+C”or click“![](/media/ec00367ea605788eab454cd176b94c7b.png)” to exit the program.
 
 ![](/media/5da95e477cc75ec61a63e001cd7e6a58.png)

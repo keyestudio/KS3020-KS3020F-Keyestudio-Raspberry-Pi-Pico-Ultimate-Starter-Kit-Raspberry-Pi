@@ -2,7 +2,9 @@
 
 1.  **Introduction**
 
-The ancients without electronic clocks, so the hourglass are invented to measure time.  The hourglass has a large capacity on both sides, and which is filled with fine sand on one side. What’s more, there is a small channel in the middle, which can make the hourglass stand upright , the side with fine sand is on the top. However, due to the action of gravity, the fine sand will flow down through the channel to the other side of the hourglass. When the sand reaches the bottom, turn it upside down and record the number of times it has gone through the hourglass, therefore, the next day we can know the approximate time of the day by it. In this project, we will use a Raspberry Pi Pico to control the tilt switch and LED lights to simulate an hourglass and make an electronic hourglass. 
+The ancients without electronic clocks, so the hourglass are invented to measure time.  The hourglass has a large capacity on both sides, and which is filled with fine sand on one side. What’s more, there is a small channel in the middle, which can make the hourglass stand upright , the side with fine sand is on the top. 
+
+However, due to the action of gravity, the fine sand will flow down through the channel to the other side of the hourglass. When the sand reaches the bottom, turn it upside down and record the number of times it has gone through the hourglass, therefore, the next day we can know the approximate time of the day by it. In this project, we will use a Raspberry Pi Pico to control the tilt switch and LED lights to simulate an hourglass and make an electronic hourglass. 
 
 2.  **Components Required**
 
@@ -43,22 +45,12 @@ The ancients without electronic clocks, so the hourglass are invented to measure
 
 ![](/media/8c40739f8e05f753f145420b421a0f47.png)
 
-Tilt switch is also called digital switch. Inside is a metal ball that
-can roll. The principle of rolling the metal ball to contact with the
-conductive plate at the bottom, which is used to control the on and off
-of the circuit. When it is a rolling ball tilt sensing switch with
-single directional trigger, the tilt sensor is tilted toward the trigger
-end (two gold-plated pin ends), the tilt switch is in a closed circuit
-and the voltage at the analog port is about 5V (binary number is 1023).
-In this way, the LED will light up. When the tilt switch is in a
-horizontal position or tilted to the other end, it is open and the
-voltage of the analog port is about 0V (binary number is 0), the LED
-will turn off. In the program, we judge the state of the switch based on
-whether the voltage value of the analog port is greater than 2.5V
-(binary number is 512).
+Tilt switch is also called digital switch. Inside is a metal ball that can roll. The principle of rolling the metal ball to contact with the conductive plate at the bottom, which is used to control the on and off of the circuit. When it is a rolling ball tilt sensing switch with single directional trigger, the tilt sensor is tilted toward the trigger end (two gold-plated pin ends), the tilt switch is in a closed circuit and the voltage at the analog port is about 5V (binary number is 1023).
 
-As shown in the figure, use the internal structure of the tilt switch to
-illustrate how it works.
+In this way, the LED will light up. When the tilt switch is in a horizontal position or tilted to the other end, it is open and the
+voltage of the analog port is about 0V (binary number is 0), the LED will turn off. In the program, we judge the state of the switch based on whether the voltage value of the analog port is greater than 2.5V(binary number is 512).
+
+As shown in the figure, use the internal structure of the tilt switch to illustrate how it works.
 
 ![](/media/bf8b10ad248ac939ac4ef96d02ed87c7.png)
 
@@ -82,17 +74,13 @@ How to identify the 220Ω 5-band resistor and 10KΩ 5-band resistor
 
 5.  **Test Code**
 
-The code used in this project is saved in the file KS3020 Keyestudio
-Raspberry Pi Pico Learning Kit Ultimate Edition\\3. Raspberry Pi
-System\\Python\_Tutorial\\2. Projects\\Project 15：Tilt And LED.
+The code used in this project is saved in the file KS3020 Keyestudio Raspberry Pi Pico Learning Kit Ultimate Edition\\3. Raspberry Pi System\\Python\_Tutorial\\2. Projects\\Project 15：Tilt And LED.
 
-You can move the code anywhere. We save the code to the pi folder of the
-Raspberry Pi system. The path:home/pi/2. Projects
+You can move the code anywhere. We save the code to the pi folder of the Raspberry Pi system. The path:home/pi/2. Projects
 
 ![](/media/ae27830403a2f741aa9b725e5324c215.png)
 
-Open“Thonny”, click“This computer”→“home”→“pi”→“2. Projects”→“Project
-15：Tilt And LED. And double-click the“Project\_15\_Tilt\_And\_LED.py”.
+Open“Thonny”, click“This computer”→“home”→“pi”→“2. Projects”→“Project 15：Tilt And LED. And double-click the“Project\_15\_Tilt\_And\_LED.py”.
 
 ![](/media/330c9af9def412421038a3906b330043.png)
 
@@ -131,16 +119,12 @@ Open“Thonny”, click“This computer”→“home”→“pi”→“2. Proje
 
 6.  **Test Result**
     
-    Ensure that the Raspberry Pi Pico is connected to the
-    computer，click“![](/media/ec00367ea605788eab454cd176b94c7b.png)Stop/Restart backend”.
+Ensure that the Raspberry Pi Pico is connected to the computer，click“![](/media/ec00367ea605788eab454cd176b94c7b.png)Stop/Restart backend”.
 
 ![](/media/5b7274a01646a14b7bf7b0cbdb6fe5d7.png)
 
-Click“![](/media/bb4d9305714a178069d277b20e0934b7.png)Run current script”, the code starts
-executing, we will see that when you tilt the breadboard to an angle,
-the LEDs will light up one by one. When you turn the breadboard to the
-original angle, the LEDs will turn off one by one. Like the hourglass,
-the sand will leak out over time.
+Click“![](/media/bb4d9305714a178069d277b20e0934b7.png)Run current script”, the code starts executing, we will see that when you tilt the breadboard to an angle, the LEDs will light up one by one. When you turn the breadboard to the original angle, the LEDs will turn off one by one. Like the hourglass, the sand will leak out over time.
+
 Click“![](/media/ec00367ea605788eab454cd176b94c7b.png)Stop/Restart backend”to exit the program.
 
 ![](/media/4dd22f89da91bfae3943271e9b7fc6f8.png)

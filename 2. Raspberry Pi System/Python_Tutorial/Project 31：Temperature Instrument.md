@@ -2,11 +2,8 @@
 
 1.  **Introduction**
     
-    Thermistor is a kind of resistor whose resistance depends on
-    temperature changes, which is widely used in gardening, home alarm
-    system and other devices. Therefore, we can use this feature to make
-    a temperature instrument.
-
+Thermistor is a kind of resistor whose resistance depends on temperature changes, which is widely used in gardening, home alarm system and other devices. Therefore, we can use this feature to make a temperature instrument.
+    
 2.  **Components Required**
 
 <table>
@@ -44,11 +41,7 @@
 
 3.  **Component Knowledge**
     
-    Thermistor: A thermistor is a temperature sensitive resistor. When
-    it senses a change in temperature, the thermistor's resistance
-    changes. We can use this feature to detect temperature intensity
-    with thermistor. Thermistors and its electronic symbols are shown
-    below:
+Thermistor: A thermistor is a temperature sensitive resistor. When it senses a change in temperature, the thermistor's resistance changes. We can use this feature to detect temperature intensity with thermistor. Thermistors and its electronic symbols are shown below:
 
 ![](/media/809b8634747fb295021f12e3b92b7894.png)
 
@@ -58,49 +51,35 @@ The relation between thermistor resistance and temperature is:
 
 Rt is the resistance of the thermistor at T2 temperature.
 
-R is the nominal resistance value of the thermistor at T1 room
-temperature.
+R is the nominal resistance value of the thermistor at T1 room temperature.
 
 EXP\[n\] is the nth power of e.
 
 B is the temperature index
 
-T1 and T2 refer to K degrees, that is, Kelvin temperature. Kelvin
-temperature =273.15 + Celsius temperature. For thermistor parameters, we
-use : B=3950, R=10KΩ，T1=25℃.The circuit connection method of thermistor
-is similar to that the photoresistor, as shown below :
+T1 and T2 refer to K degrees, that is, Kelvin temperature. Kelvin temperature =273.15 + Celsius temperature. For thermistor parameters, we use : B=3950, R=10KΩ，T1=25℃.The circuit connection method of thermistor is similar to that the photoresistor, as shown below :
 
 ![](/media/ac0d68aac58bffa5c99e1d0ed3a8bc37.jpeg)
 
-We can use the value measured by the ADC converter to get the resistance
-value of the thermistor, and then use the formula to get the temperature
-value. Therefore, the temperature formula can be deduced as:
+We can use the value measured by the ADC converter to get the resistance value of the thermistor, and then use the formula to get the temperature value. Therefore, the temperature formula can be deduced as:
 
 4.  **Read the Values**
     
-    First we will learn the thermistor to read the current ADC value,
-    voltage value and temperature value and print them out . Please
-    connect the wires according to the following wiring diagram.
+First we will learn the thermistor to read the current ADC value, voltage value and temperature value and print them out . Please connect the wires according to the following wiring diagram.
 
 ![](/media/c143dc239ceaa5e65a63f47d6512630c.png)
 
 ![](/media/c0ad763fa1dda5ce55d03fe9b3d61bcd.png)
 
-The code used in this project is saved in the file KS3020 Keyestudio
-Raspberry Pi Pico Learning Kit Ultimate Edition\\3. Raspberry Pi
-System\\Python\_Tutorial\\2. Projects\\Project 31：Temperature
-Instrument. You can move the code anywhere. We save the code to the pi
-folder of the Raspberry Pi system. The path:home/pi/2. Projects.
+The code used in this project is saved in the file KS3020 Keyestudio Raspberry Pi Pico Learning Kit Ultimate Edition\\3. Raspberry Pi System\\Python\_Tutorial\\2. Projects\\Project 31：Temperature Instrument. You can move the code anywhere. We save the code to the pi folder of the Raspberry Pi system. The path:home/pi/2. Projects.
 
-Open“Thonny”, click“This computer”→“home”→“pi”→“2. Projects”→“Project
-31: Temperature Instrument”. And double left-click
-the“Project\_31.1\_Read\_the\_thermistor\_analog\_value.py”.
+Open“Thonny”, click“This computer”→“home”→“pi”→“2. Projects”→“Project 31: Temperature Instrument”. And double left-click
+the “Project\_31.1\_Read\_the\_thermistor\_analog\_value.py”.
 
 ![](/media/ae27830403a2f741aa9b725e5324c215.png)
 
-Open“Thonny”, click“This computer”→“home”→“pi”→“2. Projects”→“Project
-31: Temperature Instrument”. And double left-click
-the“Project\_31.1\_Read\_the\_thermistor\_analog\_value.py”.
+Open“Thonny”, click“This computer”→“home”→“pi”→“2. Projects”→“Project 31: Temperature Instrument”. And double left-click
+the “Project\_31.1\_Read\_the\_thermistor\_analog\_value.py”.
 
 ![](/media/dfba50f255a7ff5b0bd327fa210cf6b2.png)
 
@@ -128,18 +107,11 @@ the“Project\_31.1\_Read\_the\_thermistor\_analog\_value.py”.
 </tbody>
 </table>
 
-Ensure that the Raspberry Pi Pico is connected to the
-computer，click“![](/media/92a50d0579b5d50ea659a6b8930da44a.png)Stop/Restart backend”.
+Ensure that the Raspberry Pi Pico is connected to the computer，click“![](/media/92a50d0579b5d50ea659a6b8930da44a.png)Stop/Restart backend”.
 
 ![](/media/685166e5ad7c715f87a71fd1e353d475.png)
 
-Click “![](/media/b8c516557596c51f73780a628fc6a933.png)Run current script”, the code starts
-executing, we will see that the "Shell" window of Thonny IDE will
-continuously display the thermistor's current ADC value, voltage value,
-and temperature value.  Try pinching the thermistor with your index
-finger and thumb (don't touch the wire) for a while, and you will see
-the temperature increase. Press“Ctrl+C”or
-click“![](/media/92a50d0579b5d50ea659a6b8930da44a.png)Stop/Restart backend”to exit the program.
+Click “![](/media/b8c516557596c51f73780a628fc6a933.png)Run current script”, the code starts executing, we will see that the "Shell" window of Thonny IDE will continuously display the thermistor's current ADC value, voltage value, and temperature value.  Try pinching the thermistor with your index finger and thumb (don't touch the wire) for a while, and you will see the temperature increase. Press“Ctrl+C”or click“![](/media/92a50d0579b5d50ea659a6b8930da44a.png)Stop/Restart backend”to exit the program.
 
 ![](/media/d6a85395a98b16456b424d1757fb48e2.png)
 
@@ -147,9 +119,7 @@ click“![](/media/92a50d0579b5d50ea659a6b8930da44a.png)Stop/Restart backend”t
 
 5.  **Circuit Diagram and Wiring Diagram**
 
-Note : LCD\_128X32\_DOT must be connected with a 10CM M-F Dupont wire,
-the LCD\_128X32\_DOT will display normally. Otherwise, using a 20CM M-F
-Dupont wire may cause the LCD\_128X32\_DOT display abnormally.  
+Note : LCD\_128X32\_DOT must be connected with a 10CM M-F Dupont wire, the LCD\_128X32\_DOT will display normally. Otherwise, using a 20CM M-F Dupont wire may cause the LCD\_128X32\_DOT display abnormally.  
 
 ![](/media/281774a4fbf4f7f2ca0fd1e60c89516c.png)
 
@@ -157,21 +127,13 @@ Dupont wire may cause the LCD\_128X32\_DOT display abnormally.  
 
 6.  **Test Code**
 
-The code used in this project is saved in the file KS3020 Keyestudio
-Raspberry Pi Pico Learning Kit Ultimate Edition\\3. Raspberry Pi
-System\\Python\_Tutorial\\2. Projects\\Project 31：Temperature
-Instrument. You can move the code anywhere. We save the code to the pi
-folder of the Raspberry Pi system. The path:home/pi/2. Projects.
+The code used in this project is saved in the file KS3020 Keyestudio Raspberry Pi Pico Learning Kit Ultimate Edition\\3. Raspberry Pi System\\Python\_Tutorial\\2. Projects\\Project 31：Temperature Instrument. You can move the code anywhere. We save the code to the pi folder of the Raspberry Pi system. The path:home/pi/2. Projects.
 
 ![](/media/ae27830403a2f741aa9b725e5324c215.png)
 
-Open“Thonny”, click “This computer”→“home”→“pi”→“2. Projects”→“Project
-31：Temperature Instrument”.
-Select“lcd128\_32.py”and“lcd128\_32\_fonts.py”， right-click and
-select“Upload to /”，waiting for the
-“lcd128\_32.py”and“lcd128\_32\_fonts.py”to be uploaded to the
-Raspberry Pi Pico. And double left-click
-the“Project\_31.2\_Temperature\_Instrument.py”.
+Open“Thonny”, click “This computer”→“home”→“pi”→“2. Projects”→“Project 31：Temperature Instrument”.
+Select“lcd128\_32.py”and“lcd128\_32\_fonts.py”， right-click and select“Upload to /”，waiting for the
+“lcd128\_32.py”and“lcd128\_32\_fonts.py”to be uploaded to the Raspberry Pi Pico. And double left-click the “Project\_31.2\_Temperature\_Instrument.py”.
 
 ![](/media/51899f245e06b3e3cb9067edc15ac9db.png)
 
@@ -233,18 +195,12 @@ the“Project\_31.2\_Temperature\_Instrument.py”.
 </tbody>
 </table>
 
-7.  **Text Result**
+7.  **Test Result**
     
-    Ensure that the Raspberry Pi Pico is connected to the
-    computer，click“![](/media/92a50d0579b5d50ea659a6b8930da44a.png)Stop/Restart backend”.
+Ensure that the Raspberry Pi Pico is connected to the computer，click“![](/media/92a50d0579b5d50ea659a6b8930da44a.png)Stop/Restart backend”.
     
-    ![](/media/5dca0b0bfa2a91ecb44acd93352c7fae.png)
+![](/media/5dca0b0bfa2a91ecb44acd93352c7fae.png)
     
-    Click“![](/media/b8c516557596c51f73780a628fc6a933.png)Run current script”, the code starts
-    executing, we will see that the LCD 128X32 DOT displays the voltage
-    value of the thermistor and the temperature value in the current
-    environment. Press“Ctrl+C”or
-    click“![](/media/92a50d0579b5d50ea659a6b8930da44a.png)Stop/Restart backend”to exit the
-    program.
+Click“![](/media/b8c516557596c51f73780a628fc6a933.png)Run current script”, the code starts executing, we will see that the LCD 128X32 DOT displays the voltage value of the thermistor and the temperature value in the current environment. Press“Ctrl+C”or click“![](/media/92a50d0579b5d50ea659a6b8930da44a.png)Stop/Restart backend”to exit the program.
 
 ![](/media/76838f88b0ab17d60b9b0dc878604d47.png)

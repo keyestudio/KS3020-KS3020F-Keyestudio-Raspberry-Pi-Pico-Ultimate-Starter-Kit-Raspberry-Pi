@@ -2,10 +2,7 @@
 
 1.  **Introduction**
 
-The dot-matrix display is an electronic digital display device that can
-show information on machines, clocks and many other devices. In this
-project, we will use the Raspberry Pi Pico to control the 8x8 LED dot
-matrix to make a“❤”pattern.
+The dot-matrix display is an electronic digital display device that can show information on machines, clocks and many other devices. In this project, we will use the Raspberry Pi Pico to control the 8x8 LED dot matrix to make a“❤”pattern.
 
 2.  **Components Required**
 
@@ -40,14 +37,7 @@ matrix to make a“❤”pattern.
 
 **8\*8 Dot-matrix display module:**
 
-The 8\*8 dot matrix is composed of 64 LEDs, and each LED is placed at
-the intersection of a row and a column. When using a single-chip
-microcomputer to drive an 8\*8 dot matrix, we need to use a total of 16
-digital ports, which greatly wastes the data of the single-chip
-microcomputer. For this reason, we specially designed this module, using
-the HT16K33 chip to drive an 8\*8 dot matrix, and only need to use the
-I2C communication port of the single-chip microcomputer to control the
-dot matrix, which greatly saves the microcontroller resources.
+The 8\*8 dot matrix is composed of 64 LEDs, and each LED is placed at the intersection of a row and a column. When using a single-chip microcomputer to drive an 8\*8 dot matrix, we need to use a total of 16 digital ports, which greatly wastes the data of the single-chip microcomputer. For this reason, we specially designed this module, using the HT16K33 chip to drive an 8\*8 dot matrix, and only need to use the I2C communication port of the single-chip microcomputer to control the dot matrix, which greatly saves the microcontroller resources.
 
 **Specifications:**
 
@@ -61,10 +51,7 @@ Maximum power: 1W
 
 ![](/media/b04fe5e60695365a23644395aaef5085.png)
 
-Some modules have three DIP switches that you can flip at will. These
-switches are used to set the I2C communication address. The setting
-method is as follows. The module has fixed the communication address.
-A0, A1 and A2 are connected to GND, and the address is 0x70.  
+Some modules have three DIP switches that you can flip at will. These switches are used to set the I2C communication address. The setting method is as follows. The module has fixed the communication address. A0, A1 and A2 are connected to GND, and the address is 0x70.  
 
 <table>
 <tbody>
@@ -172,28 +159,19 @@ A0, A1 and A2 are connected to GND, and the address is 0x70.  
 
 4.  **Circuit Diagram and Wiring Diagram**
     
-    ![](/media/f4fc6111c35b571928d0f0a4a4bf45b3.png)
+![](/media/f4fc6111c35b571928d0f0a4a4bf45b3.png)
     
-    ![](/media/ad529b82657cd9c7ddcd4b8828a0b1e8.png)
+![](/media/ad529b82657cd9c7ddcd4b8828a0b1e8.png)
     
-    **Test Code**
+**5. Test Code**
 
-The code used in this project is saved in the file KS3020 Keyestudio
-Raspberry Pi Pico Learning Kit Ultimate Edition\\3. Raspberry Pi
-System\\Python\_Tutorial\\2. Projects\\Project 10：8×8 Dot-matrix
-Display.
+The code used in this project is saved in the file KS3020 Keyestudio Raspberry Pi Pico Learning Kit Ultimate Edition\\3. Raspberry Pi System\\Python\_Tutorial\\2. Projects\\Project 10：8×8 Dot-matrix Display.
 
-You can move the code to anywhere.For example, we save it in the pi
-folder of the Raspberry Pi system, the route is home/pi/2. Projects.
+You can move the code to anywhere.For example, we save it in the pi folder of the Raspberry Pi system, the route is home/pi/2. Projects.
 
 ![](/media/ae27830403a2f741aa9b725e5324c215.png)
 
-Open“Thonny, click “This computer”→“home”→“pi”→“2. Projects”→“Project
-10：8×8 Dot-matrix Display”.
-Select“ht16k33\_matrix.py”and“matrix\_fonts.py”，right-click and
-select“Upload to /”and wait
-for“ht16k33\_matrix.py”and“matrix\_fonts.py”to be uploaded to
-the Raspberry Pi Pico. And double-click
+Open“Thonny, click “This computer”→“home”→“pi”→“2. Projects”→“Project 10：8×8 Dot-matrix Display”. Select“ht16k33\_matrix.py”and“matrix\_fonts.py”，right-click and select“Upload to /”and wait for “ht16k33\_matrix.py”and“matrix\_fonts.py”to be uploaded to the Raspberry Pi Pico. And double-click
 the“Project\_10\_8×8\_Dot\_Matrix\_Display.py”.
 
 ![](/media/ac77180c40e309315873031716174110.png)
@@ -263,19 +241,12 @@ the“Project\_10\_8×8\_Dot\_Matrix\_Display.py”.
 </tr>
 </tbody>
 </table>
+**6. Test Result**
 
-5.  **Test Result**
-    
-    Ensure that the Raspberry Pi Pico is connected to the computer,
-    click ![](/media/ec00367ea605788eab454cd176b94c7b.png)“Stop/Restart backend”.
-    
-    ![](/media/e322767bf299432a383821d873aa3d5b.png)
-    
-    Click ![](/media/bb4d9305714a178069d277b20e0934b7.png)“Run current script”, the code starts
-    executing, we will see that the 8 x 8 dot matrix displays the
-    character "A" 1S, "B" 1S, and "C" 1S. Then scroll to display the
-    string "Hello
-    World”repeatedly. Click![](/media/ec00367ea605788eab454cd176b94c7b.png)“Stop/Restart
-    backend”to exit the program.
+Ensure that the Raspberry Pi Pico is connected to the computer, click ![](/media/ec00367ea605788eab454cd176b94c7b.png)“Stop/Restart backend”.
+
+![](/media/e322767bf299432a383821d873aa3d5b.png)
+
+Click ![](/media/bb4d9305714a178069d277b20e0934b7.png)“Run current script”, the code starts executing, we will see that the 8 x 8 dot matrix displays the character "A" 1S, "B" 1S, and "C" 1S. Then scroll to display the string "Hello World”repeatedly. Click![](/media/ec00367ea605788eab454cd176b94c7b.png)“Stop/Restart backend”to exit the program.
 
 ![](/media/85c98d8f0f151318b93e299bada82147.png)

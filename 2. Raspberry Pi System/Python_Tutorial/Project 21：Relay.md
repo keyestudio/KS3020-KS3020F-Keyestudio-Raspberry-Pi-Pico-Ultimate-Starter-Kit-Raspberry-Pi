@@ -2,14 +2,8 @@
 
 1.  **Introduction**
     
-    In daily life, we generally use AC to drive electrical equipment,
-    and sometimes we use switches to control electrical appliances. If
-    the switch is directly connected to the AC circuit, once electricity
-    leakage occurs, people are in danger. From a safety point of view,
-    we specially designed this relay module with NO (normally open) and
-    NC (normally closed) terminals. In this lesson we will learn a
-    special and easy-to-use switch, which is the relay module.
-
+In daily life, we generally use AC to drive electrical equipment, and sometimes we use switches to control electrical appliances. If the switch is directly connected to the AC circuit, once electricity leakage occurs, people are in danger. From a safety point of view, we specially designed this relay module with NO (normally open) and NC (normally closed) terminals. In this lesson we will learn a special and easy-to-use switch, which is the relay module.
+    
 2.  **Components Required**
 
 <table>
@@ -33,17 +27,15 @@
 
 3.  **Component Knowledge**
     
-    **Relay:** It is an "automatic switch" that uses a small current to
-    control the operation of a large current.
+**Relay:** It is an "automatic switch" that uses a small current to control the operation of a large current.
     
-    Input voltage：3.3V-5V
+Input voltage：3.3V-5V
     
-    Rated load：5A 250VAC (NO/NC) 5A 24VDC (NO/NC)
+Rated load：5A 250VAC (NO/NC) 5A 24VDC (NO/NC)
     
-    The rated load means that devices with dc voltage of 24V or AC
-    voltage of 250V can be controlled using 3.3V-5V microcontrollers.  
+The rated load means that devices with dc voltage of 24V or AC voltage of 250V can be controlled using 3.3V-5V microcontrollers.  
     
-    **Schematic diagram of the Relay:**
+**Schematic diagram of the Relay:**
 
 ![](/media/be1c90d2b52fc2489590e3f702a087bf.emf)
 
@@ -55,17 +47,13 @@
 
 5.  **Test Code**
 
-The code used in this project is saved in the file KS3020 Keyestudio
-Raspberry Pi Pico Learning Kit Ultimate Edition\\3. Raspberry Pi
-System\\Python\_Tutorial\\2. Projects\\Project 21：Relay.
+The code used in this project is saved in the file KS3020 Keyestudio Raspberry Pi Pico Learning Kit Ultimate Edition\\3. Raspberry Pi System\\Python\_Tutorial\\2. Projects\\Project 21：Relay.
 
-You can move the code anywhere. We save the code to the pi folder of the
-Raspberry Pi system. The path:home/pi/2. Projects
+You can move the code anywhere. We save the code to the pi folder of the Raspberry Pi system. The path:home/pi/2. Projects
 
 ![](/media/ae27830403a2f741aa9b725e5324c215.png)
 
-Open“Thonny”, click“This computer”→“home”→“pi”→“2. Projects”→“Project
-21：Relay”. And double-click the“Project\_21\_Relay.py”.
+Open“Thonny”, click“This computer”→“home”→“pi”→“2. Projects”→“Project 21：Relay”. And double-click the“Project\_21\_Relay.py”.
 
 ![](/media/57310f17327299cc49eeca50bcd8b7c1.png)
 
@@ -94,16 +82,10 @@ Open“Thonny”, click“This computer”→“home”→“pi”→“2. Proje
 
 6.  **Test Result**
     
-    Ensure that the Raspberry Pi Pico is connected to the
-    computer，click“![](/media/ec00367ea605788eab454cd176b94c7b.png)Stop/Restart backend”.
+Ensure that the Raspberry Pi Pico is connected to the computer，click“![](/media/ec00367ea605788eab454cd176b94c7b.png)Stop/Restart backend”.
 
 ![](/media/d7abc767223f8f73b7d9996316439607.png)
 
-Click“![](/media/bb4d9305714a178069d277b20e0934b7.png)Run current script”, the code starts
-executing, we will see that the relay will cycle on and off, on for 1
-second, off for 1 second.  At the same time, you can hear the sound of
-the relay on and off, and you can also see the change of the indicator
-light on the relay. Press“![](/media/ec00367ea605788eab454cd176b94c7b.png)Ctrl+C”or
-click“Stop/Restart backend”to exit the program.
+Click“![](/media/bb4d9305714a178069d277b20e0934b7.png)Run current script”, the code starts executing, we will see that the relay will cycle on and off, on for 1 second, off for 1 second.  At the same time, you can hear the sound of the relay on and off, and you can also see the change of the indicator light on the relay. Press“![](/media/ec00367ea605788eab454cd176b94c7b.png)Ctrl+C”or click“Stop/Restart backend”to exit the program.
 
 ![](/media/61481c566efa37002db8b70970a81a5b.png)

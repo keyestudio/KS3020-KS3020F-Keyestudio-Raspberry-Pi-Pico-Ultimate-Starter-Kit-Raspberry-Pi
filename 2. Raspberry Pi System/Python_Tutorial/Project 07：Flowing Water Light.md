@@ -4,10 +4,7 @@
 
 1.  **Introduction**
 
-In our daily life, we can see many billboards made up of different
-colors of LED. They constantly change the light to attract the attention
-of customers. In this project, we will use Raspberry Pi Pico to control
-10 LEDs to achieve the effect of flowing water.
+In our daily life, we can see many billboards made up of different colors of LED. They constantly change the light to attract the attention of customers. In this project, we will use Raspberry Pi Pico to control 10 LEDs to achieve the effect of flowing water.
 
 2.  **Components Required**
 
@@ -60,24 +57,15 @@ How to identify the 220Ω 5-band resistor
 
 4.  **Test Code**
 
-This project is to design and manufacture a flowing water light.  Here
-are the steps: first , turn on LED \#1, then turn it off.  Second, turn
-on LED \#2, then turn off... . Do the same for the 10 LEDs until the
-last one is turned off.  Repeating the process to achieve the "movement"
-of the water.
+This project is to design and manufacture a flowing water light.Here are the steps: first , turn on LED \#1, then turn it off.Second, turn on LED \#2, then turn off... . Do the same for the 10 LEDs until the last one is turned off.  Repeating the process to achieve the "movement" of the water.
 
-The code used in this project is saved in the file KS3020 Keyestudio
-Raspberry Pi Pico Learning Kit Ultimate Edition\\3. Raspberry Pi
-System\\Python\_Tutorial\\2. Projects\\Project 07：Flowing Water Light.
+The code used in this project is saved in the file KS3020 Keyestudio Raspberry Pi Pico Learning Kit Ultimate Edition\\3. Raspberry Pi System\\Python\_Tutorial\\2. Projects\\Project 07：Flowing Water Light.
 
-You can move the code to anywhere.For example, we save it in the oi
-folder of the Raspberry Pi system, the route is home/pi/2. Projects.
+You can move the code to anywhere.For example, we save it in the oi folder of the Raspberry Pi system, the route is home/pi/2. Projects.
 
 ![](/media/ae27830403a2f741aa9b725e5324c215.png)
 
-Open“Thonny, click“This computer”→“home”→“pi”→“2. Projects”→”Project
-07：Flowing Water Light”and
-double-click“Project\_07\_Flowing\_Water\_Light.py”
+Open“Thonny, click“This computer”→“home”→“pi”→“2. Projects”→”Project 07：Flowing Water Light”and double-click“Project\_07\_Flowing\_Water\_Light.py”
 
 ![](/media/7b5bf98a689171d60a3601f16e0ad283.png)
 
@@ -110,17 +98,13 @@ double-click“Project\_07\_Flowing\_Water\_Light.py”
 </tbody>
 </table>
 
-**Test Result：**
+**5. Test Result：**
 
-Connect the pico board to the Raspberry Pi. Click
-![](/media/32e03e9d4211e9ef97c1d2b18f05c902.png)to check the Shell
+Connect the pico board to the Raspberry Pi. Click![](/media/32e03e9d4211e9ef97c1d2b18f05c902.png)to check the Shell.
 
 ![](/media/909f8976896d54a32d84d7ac1f0537c1.png)
 
-Click ![](/media/bb4d9305714a178069d277b20e0934b7.png)“Run current script”, the code starts
-executing, we will see that the 10 LEDs will light up like a flowing
-light. Click ![](/media/ec00367ea605788eab454cd176b94c7b.png)“Stop/Restart backend”to exit the
-program.
+Click ![](/media/bb4d9305714a178069d277b20e0934b7.png)“Run current script”, the code starts executing, we will see that the 10 LEDs will light up like a flowing light. Click ![](/media/ec00367ea605788eab454cd176b94c7b.png)“Stop/Restart backend”to exit the program.
 
 ![](/media/723dd7931ac070cf30719700f47f6850.png)
 

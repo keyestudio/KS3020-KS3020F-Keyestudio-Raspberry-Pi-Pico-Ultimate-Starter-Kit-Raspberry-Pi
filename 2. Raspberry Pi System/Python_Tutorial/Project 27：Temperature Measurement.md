@@ -2,12 +2,7 @@
 
 1.  **Introduction**
 
-LM35 is a commonly used and easy-to-use temperature sensor. It does not
-require other hardware, only needs an analog port. The difficulty lies
-in compiling the code and converting the analog values to Celsius
-temperature. In this project, we use a temperature sensor and 3 LEDs to
-make a temperature tester. When the temperature sensor touches objects
-with different temperature, the LEDs will show different colors.
+LM35 is a commonly used and easy-to-use temperature sensor. It does not require other hardware, only needs an analog port. The difficulty lies in compiling the code and converting the analog values to Celsius temperature. In this project, we use a temperature sensor and 3 LEDs to make a temperature tester. When the temperature sensor touches objects with different temperature, the LEDs will show different colors.
 
 2.  **Components Required**
 
@@ -56,41 +51,25 @@ with different temperature, the LEDs will show different colors.
 
 ![](/media/0fded1cfe95575d0fa4aa03839d8e30d.png)
 
-**Working principle of LM35 temperature sensor:** LM35 is a widely used
-temperature sensor with many different package types. At room
-temperature, it can achieve the accuracy of 1/4°C without additional
-calibration processing. LM35 temperature sensor can produce different
-voltage by different temperature. When the temperature is 0 ℃, it
-outputs 0V. If increasing 1 ℃, the output voltage will increase 10mv.
-The output temperature is 0℃ to 100℃, the conversion formula is as
-follows.
+**Working principle of LM35 temperature sensor:** LM35 is a widely used temperature sensor with many different package types. At room temperature, it can achieve the accuracy of 1/4°C without additional calibration processing. LM35 temperature sensor can produce different voltage by different temperature. When the temperature is 0 ℃, it outputs 0V. If increasing 1 ℃, the output voltage will increase 10mv. The output temperature is 0℃ to 100℃, the conversion formula is as follows.
 
 ![](/media/0dfa07fa69f2a98658a3822c2da93bf7.jpeg)
 
 4.  **Read the Temperature Value**
 
-We first use a simple code to read the value of the temperature sensor,
-print it in the serial monitor. The wiring diagram is shown below.
+We first use a simple code to read the value of the temperature sensor, print it in the serial monitor. The wiring diagram is shown below.
 
 ![](/media/952016b1b69fcad9f4eea889de63106a.png)
 
 ![](/media/2c05b1929588977832c955526f519e89.png)
 
-LM35 output is given to analog pin GP26 of the Raspberry Pi Pico. This
-analog voltage is converted to its digital form and processed to get the
-temperature reading.
+LM35 output is given to analog pin GP26 of the Raspberry Pi Pico. This analog voltage is converted to its digital form and processed to get the temperature reading.
 
-The code used in this project is saved in the file KS3020 Keyestudio
-Raspberry Pi Pico Learning Kit Ultimate Edition\\3. Raspberry Pi
-System\\Python\_Tutorial\\2. Projects\\Project 27：Temperature
-Measurement. You can move the code anywhere. We save the code to the pi
-folder of the Raspberry Pi system. The path:home/pi/2. Projects
+The code used in this project is saved in the file KS3020 Keyestudio Raspberry Pi Pico Learning Kit Ultimate Edition\\3. Raspberry Pi System\\Python\_Tutorial\\2. Projects\\Project 27：Temperature Measurement. You can move the code anywhere. We save the code to the pi folder of the Raspberry Pi system. The path:home/pi/2. Projects
 
 ![](/media/ae27830403a2f741aa9b725e5324c215.png)
 
-Open“Thonny”, click“This computer”→“home”→“pi”→“2. Projects”→“Project
-27：Temperature Measurement”. And double left-click
-the“Project\_27.1\_Read\_LM35\_Temperature\_Value.py”.
+Open“Thonny”, click“This computer”→“home”→“pi”→“2. Projects”→“Project 27：Temperature Measurement”. And double left-click the “Project\_27.1\_Read\_LM35\_Temperature\_Value.py”.
 
 ![](/media/9be9a19832db166fbcb2a8618a813cfc.png)
 
@@ -111,52 +90,36 @@ the“Project\_27.1\_Read\_LM35\_Temperature\_Value.py”.
 </tr>
 </tbody>
 </table>
+**5. Test Result**
 
-6.  **Text Result**
-    
-    Ensure that the Raspberry Pi Pico is connected to the
-    computer，click“![](/media/27451c8a9c13e29d02bc0f5831cfaf1f.png)“Stop/Restart backend.
+Ensure that the Raspberry Pi Pico is connected to the computer，click“![](/media/27451c8a9c13e29d02bc0f5831cfaf1f.png)“Stop/Restart backend.
 
 ![](/media/8381fdb5db551ce91677b1ada5e05140.png)
 
-Click“![](/media/da852227207616ccd9aff28f19e02690.png)Run current script”, the code starts
-executing, we will see that The "Shell" window of Thonny IDE will print
-the temperature values read by the LM35 temperature sensor. Hold the
-LM35 element by hand, the temperature value read by the LM35 temperature
-sensor will change. Press“Ctrl+C”or
-click“![](/media/27451c8a9c13e29d02bc0f5831cfaf1f.png)Stop/Restart backend”to exit the program.
+Click“![](/media/da852227207616ccd9aff28f19e02690.png)Run current script”, the code starts executing, we will see that The "Shell" window of Thonny IDE will print the temperature values read by the LM35 temperature sensor. Hold the LM35 element by hand, the temperature value read by the LM35 temperature sensor will change. Press“Ctrl+C”or click“![](/media/27451c8a9c13e29d02bc0f5831cfaf1f.png)Stop/Restart backend”to exit the program.
 
 ![](/media/16fe92748af1c5cc9dafdb2f2c2b8a84.png)
 
 ![](/media/9c2c52dbee8a37315075178f167ba342.png)
 
-5.  **Circuit Diagram and Wiring Diagram**
+**6. Circuit Diagram and Wiring Diagram**
 
-Now we use a LM35 temperature sensor and three LED lights to do a
-temperature test. When the LM35 temperature sensor senses different
-temperatures, different LED lights will light up. Follow the diagram
-below for wiring.
+Now we use a LM35 temperature sensor and three LED lights to do a temperature test. When the LM35 temperature sensor senses different temperatures, different LED lights will light up. Follow the diagram below for wiring.
 
 ![](/media/65b5f44e3a73ff102a40f6c90bdf6d4c.png)
 
 ![](/media/fa3eddc7bda77c7c8420d0f3a0b0d2eb.png)
 
-6.  **Text Code**
+**7. Test Code**
 
-The code used in this project is saved in the file KS3020 Keyestudio
-Raspberry Pi Pico Learning Kit Ultimate Edition\\3. Raspberry Pi
-System\\Python\_Tutorial\\2. Projects\\Project 27：Temperature
-Measurement. You can move the code anywhere. We save the code to the pi
-folder of the Raspberry Pi system. The path:home/pi/2. Projects
+The code used in this project is saved in the file KS3020 Keyestudio Raspberry Pi Pico Learning Kit Ultimate Edition\\3. Raspberry Pi System\\Python\_Tutorial\\2. Projects\\Project 27：Temperature Measurement. You can move the code anywhere. We save the code to the pi folder of the Raspberry Pi system. The path:home/pi/2. Projects
 
 ![](/media/ae27830403a2f741aa9b725e5324c215.png)
 
-Open“Thonny”, click““This computer”→“home”→“pi”→“2. Projects”“Project
-27：Temperature Measurement”. And double left-click
-the“Project\_27.2\_Temperature\_Measurement.py”.
+Open“Thonny”, click““This computer”→“home”→“pi”→“2. Projects”“Project 27：Temperature Measurement”. And double left-click
+the “Project\_27.2\_Temperature\_Measurement.py”.
 
-Note: The temperature threshold in the code can be reset itself as
-required.  
+Note: The temperature threshold in the code can be reset itself as required.  
 
 ![](/media/3c045c0f5b0f63d0948bcc7ab5699321.png)
 
@@ -196,18 +159,12 @@ required.  
 </tbody>
 </table>
 
-7.  **Text Result**
+7.  **Test Result**
     
-    Ensure that the Raspberry Pi Pico is connected to the
-    computer，click“![](/media/27451c8a9c13e29d02bc0f5831cfaf1f.png)Stop/Restart backend”.
+Ensure that the Raspberry Pi Pico is connected to the computer，click“![](/media/27451c8a9c13e29d02bc0f5831cfaf1f.png)Stop/Restart backend”.
 
 ![](/media/8a55812323a1c8158bdb60e4bd496b28.png)
 
-Click ![](/media/da852227207616ccd9aff28f19e02690.png)“Run current script”, the code starts
-executing, we will see that the "Shell" window of Thonny IDE will print
-the temperature values read by the LM35 temperature sensor. When the
-LM35 temperature sensor senses different temperatures, different LEDS
-will light up. Press“Ctrl+C”or click![](/media/27451c8a9c13e29d02bc0f5831cfaf1f.png)“Stop/Restart
-backend”to exit the program.
+Click ![](/media/da852227207616ccd9aff28f19e02690.png)“Run current script”, the code starts executing, we will see that the "Shell" window of Thonny IDE will print the temperature values read by the LM35 temperature sensor. When the LM35 temperature sensor senses different temperatures, different LEDS will light up. Press“Ctrl+C”or click![](/media/27451c8a9c13e29d02bc0f5831cfaf1f.png)“Stop/Restart backend”to exit the program.
 
 ![](/media/20daf7e277e6321706feec4119ab7f2c.png)

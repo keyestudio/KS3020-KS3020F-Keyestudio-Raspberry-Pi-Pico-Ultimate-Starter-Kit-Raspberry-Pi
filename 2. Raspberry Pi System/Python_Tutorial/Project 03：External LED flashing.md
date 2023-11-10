@@ -2,10 +2,8 @@
 
 1.  **Introduction**
     
-    In this project, we are going to show you the external LED flashing
-    effect.  We will use the Raspberry Pi Pico's digital pins to turn on
-    the LED and make it flash.
-
+In this project, we are going to show you the external LED flashing effect.  We will use the Raspberry Pi Pico's digital pins to turn on the LED and make it flash.
+    
 2.  **Components**
 
 <table>
@@ -32,7 +30,7 @@
 <td><img src="https://raw.githubusercontent.com/keyestudio/KS3020-KS3020F-Keyestudio-Raspberry-Pi-Pico-Ultimate-Starter-Kit-Raspberry-Pi/master/media/7dcbd02995be3c142b2f97df7f7c03ce.png" style="width:1.05903in;height:0.56667in" /></td>
 </tr>
 <tr class="even">
-<td>红色LED*1</td>
+<td>Red LED*1</td>
 <td>220Ω Resistor*1</td>
 <td>Breadboard*1</td>
 <td>Jumper Wire*2</td>
@@ -41,34 +39,26 @@
 </tbody>
 </table>
 
+
 3.  **Knowledge**
 
 **（1）LED:**
 
-![](/media/081141eed6146deed2bfbd8e55a8465b.jpeg)
+![Img](./media/Project%2003：External%20LED%20flashing.md/img-20231010153407.png)
 
-The LED is a kind of semiconductor called “light-emitting diode”, which
-is an electronic device made from semiconducting materials (silicon,
-selenium, germanium, etc.).  It has a anode and a cathode.  The short
-lead is cathode, which connects to GND, the long lead is anode , which
-connects to3.3V or 5V.
+The LED is a kind of semiconductor called “light-emitting diode”, which is an electronic device made from semiconducting materials (silicon, selenium, germanium, etc.).  It has a anode and a cathode.  The short lead is cathode, which connects to GND, the long lead is anode , which connects to3.3V or 5V.
 
 ![](/media/f70404aa49540fd7aecae944c7c01f83.jpeg)
 
-2.  ** 5-band Resistor**
-    
-    A resistor is an electronic component in a circuit that restricts or
-    regulates the flow current flow. On the left is the appearance of
-    the resistor and on the right is the symbol for the resistance in
-    the circuit . Its unit is(Ω). 1 mΩ= 1000 kΩ，1kΩ= 1000Ω.
+**（2）5-band Resistor**
+
+A resistor is an electronic component in a circuit that restricts or regulates the flow current flow. On the left is the appearance of
+the resistor and on the right is the symbol for the resistance in the circuit . Its unit is(Ω). 1 mΩ= 1000 kΩ，1kΩ= 1000Ω.
 
 ![](/media/8a86f65cf820d08e8956daa70d1c4195.jpeg)
 ![](/media/f6079fe22518f0fc1b0c3a3b93a516a1.png)
 
-We can use resistors to protect sensitive components, such as LEDs. The
-strength of the resistance is marked on the body of the resistor with an
-electronic color code. Each color code represents a number, and you can
-refer to it in a resistance card.
+We can use resistors to protect sensitive components, such as LEDs. The strength of the resistance is marked on the body of the resistor with an electronic color code. Each color code represents a number, and you can refer to it in a resistance card.
 
 \-Color 1 – 1st Digit
 
@@ -82,8 +72,7 @@ refer to it in a resistance card.
 
 ![](/media/c3df005312cd9f6d4cdae6abf3cddb83.png)
 
-In this kit, we provide three 5-band resistors with different resistance
-values. Take three 5-band resistors as an example.
+In this kit, we provide three 5-band resistors with different resistance values. Take three 5-band resistors as an example.
 
 220Ω resistor\*10
 
@@ -97,45 +86,26 @@ values. Take three 5-band resistors as an example.
 
 ![](/media/19f5dfc51adfd79b04c3b164529767ed.png)
 
-In the same voltage, there will be less current and more resistance. The
-connection between current, voltage, and resistance can be expressed by
-the formula: I=U/R. In the figure below, if the voltage is 3V, the
-current through R1 is: I = U / R = 3 V / 10 KΩ= 0.0003A=
-0.3mA.![](/media/b3eec552e4dfad361833730698621776.png)
+In the same voltage, there will be less current and more resistance. The connection between current, voltage, and resistance can be expressed by the formula: I=U/R. In the figure below, if the voltage is 3V, the current through R1 is: I = U / R = 3 V / 10 KΩ= 0.0003A=0.3mA.![](/media/b3eec552e4dfad361833730698621776.png)
 
-Do not directly connect resistors with very low resistance to the two
-poles of the power supply, as this will cause excessive current to
-damage the electronic components. Resistors do not have positive and
-negative poles.
+Do not directly connect resistors with very low resistance to the two poles of the power supply, as this will cause excessive current to damage the electronic components. Resistors do not have positive and negative poles.
 
 3.  **Breadboard**
 
-A breadboard is used to build and test circuits quickly before
-finalizing any circuit design. The breadboard has many holes , into
-which circuit components like integrated circuits and resistors can be
-inserted. A typical breadboard is as follows.
+A breadboard is used to build and test circuits quickly before finalizing any circuit design. The breadboard has many holes , into
+which circuit components like integrated circuits and resistors can be inserted. A typical breadboard is as follows.
 
 ![](/media/612c1381811b2d780d5f6ed6a7ec3701.png)
 
-The bread board has strips of metal , which run underneath the board and
-connect the holes on the top of the board. The metal strips are laid out
-as shown below. Note that the top and bottom rows of holes are connected
-horizontally while the remaining holes are connected vertically.
+The bread board has strips of metal , which run underneath the board and connect the holes on the top of the board. The metal strips are laid out as shown below. Note that the top and bottom rows of holes are connected horizontally while the remaining holes are connected vertically.
 
 ![](/media/b45e70b961537035c85878b73d371725.png)
 
-The first two rows (top) and the last two rows (bottom) of the
-breadboard are used for the positive (+) and negative (-) terminals of
-the power supply, respectively. The conductive layout of the breadboard
-is shown in the following diagram.
+The first two rows (top) and the last two rows (bottom) of the breadboard are used for the positive (+) and negative (-) terminals of the power supply, respectively. The conductive layout of the breadboard is shown in the following diagram.
 
 ![](/media/d5478bd5eac558252cbc235479d979eb.png)
 
-When we connect DIP (Dual In-line Packages) components, such as
-integrated circuits, microcontrollers, chips and so on, we can see that
-a groove in the middle isolates the middle part, so the top and bottom
-of the groove is not connected. DIP components can be connected as shown
-in the figure below:
+When we connect DIP (Dual In-line Packages) components, such as integrated circuits, microcontrollers, chips and so on, we can see that a groove in the middle isolates the middle part, so the top and bottom of the groove is not connected. DIP components can be connected as shown in the figure below:
 
 ![](/media/50caf14e911c4244779e99445c658db6.png)
 
@@ -144,28 +114,21 @@ in the figure below:
 4.  **How to use the keyestudio raspberry pico expansion board.**
 
 Stack the Raspberry Pi Pico on the expansionboardto use, as shown below:
- 
+
 
 ![](/media/fae969ca3b1a4592a83a4e05f5795a5b.png)
 
 **[Power](javascript:;) [Supply](javascript:;)**
 
-In this project, we use a USB to connect the Raspberry Pi Pico to the
-computer. Please refer to the documentation for connection methods:
-Preparation for Python
+In this project, we use a USB to connect the Raspberry Pi Pico to the computer. Please refer to the documentation for connection methods: Preparation for Python
 
 ![](/media/8ea81d60b8e2132c358041235490b7d5.jpeg)
 
-4.  **Circuit Diagram and Wiring Diagram**
+**Circuit Diagram and Wiring Diagram**
 
-First, cut all power to the Raspberry Pi Pico.  Then build the circuit
-according to the circuit diagram and wiring diagram.  After the circuits
-are set up and verified, using a USB cable to connect the Raspberry Pi
-Pico to a computer .  Note: Avoid any possible short circuits
-(especially connecting 3.3V and GND)\!
+First, cut all power to the Raspberry Pi Pico.  Then build the circuit according to the circuit diagram and wiring diagram.  After the circuits are set up and verified, using a USB cable to connect the Raspberry Pi Pico to a computer .  Note: Avoid any possible short circuits(especially connecting 3.3V and GND)\!
 
-Warning: A short circuit may cause a large current in the circuit,
-causing components to overheat and permanent damage to the hardware.
+Warning: A short circuit may cause a large current in the circuit, causing components to overheat and permanent damage to the hardware.
 
 ![](/media/cb069d7553d861e3293d8bdbe85bbd05.png)
 
@@ -185,28 +148,17 @@ How to identify the 220Ω five-band resistor
 
 5.  **Test Code**
 
-According to the circuit diagram, when the GP16 output of the Pico is
-high, the LED will light up;  When the output power is low, the LED will
-light off.  Therefore, we can make the LED flash repeatedly by
-controlling the GP16 to repeatedly output high and low levels.  
+According to the circuit diagram, when the GP16 output of the Pico is high, the LED will light up;  When the output power is low, the LED will light off.  Therefore, we can make the LED flash repeatedly by controlling the GP16 to repeatedly output high and low levels.  
 
-The code used in the project is saved in the file KS3020 Keyestudio
-Raspberry Pi Pico Learning Kit Ultimate Edition\\3. Raspberry Pi
-System\\Python\_Tutorial\\2. Projects\\Project 03：External LED flashing.
-You can move the code anywhere, You can move the code to anywhere. For
-example, we save it in the oi folder of the Raspberry Pi system, the
-route is home/pi/2. Projects.
+The code used in the project is saved in the file KS3020 Keyestudio Raspberry Pi Pico Learning Kit Ultimate Edition\\3. Raspberry Pi System\\Python\_Tutorial\\2. Projects\\Project 03：External LED flashing. You can move the code anywhere, You can move the code to anywhere. For example, we save it in the oi folder of the Raspberry Pi system, the route is home/pi/2. Projects.
 
 Code running online:
 
-Open “Thonny”, clickThis computer”→“home”→“pi”→“2. Projects”→“Project
-03：External LED flashing”.
+Open “Thonny”, clickThis computer”→“home”→“pi”→“2. Projects”→“Project 03：External LED flashing”.
 
 ![](/media/ae27830403a2f741aa9b725e5324c215.png)
 
-Enter the file“Project 03：External LED flashing”, double
-left-click“Project\_03\_External\_LED\_flashing.py”,open it, as shown
-below:
+Enter the file“Project 03：External LED flashing”, double left-click“Project\_03\_External\_LED\_flashing.py”,open it, as shown below:
 
 ![](/media/8b4bad2c707397cc37c542c03d7c349f.png)
 
@@ -230,35 +182,27 @@ below:
 </tbody>
 </table>
 
-Connect the pico board to the Raspberry Pi. Click
-![](/media/32e03e9d4211e9ef97c1d2b18f05c902.png)to check the Shell
+Connect the pico board to the Raspberry Pi. Click ![](/media/32e03e9d4211e9ef97c1d2b18f05c902.png)to check the Shell
 
 ![](/media/de1565c576c4233dfbe6d143404f03ac.png)
 
-Click ![](/media/bb4d9305714a178069d277b20e0934b7.png) to run the code. Then the LED on the pico
-board will flash; click ![](/media/32e03e9d4211e9ef97c1d2b18f05c902.png)to exit the program.
+Click ![](/media/bb4d9305714a178069d277b20e0934b7.png) to run the code. Then the LED on the pico board will flash; click ![](/media/32e03e9d4211e9ef97c1d2b18f05c902.png)to exit the program.
 
 ![](/media/bb35d00ea60c7905ab81c4f36b528be6.png)
 
 ![](/media/2dcc6a55b77b4175b5175f717eb196c3.png)
 
-Note: This is the code that runs online, if we disconnect the USB cable,
-then restart the“Raspberry Pi Pico”, the LED will stop flashing. The
-following information will be displayed in the "Shell" window of Thonny
-software:  
+Note: This is the code that runs online, if we disconnect the USB cable, then restart the“Raspberry Pi Pico”, the LED will stop flashing. The following information will be displayed in the "Shell" window of Thonny software:  
 
 ![](/media/e9abb644348e7adcdeddcee76b992755.png)
 
 Code running offline（Upload the code to the Raspberry Pi Pico）：
 
-Ensure that the Raspberry Pi Pico is connected to the computer,
-click“![](/media/32e03e9d4211e9ef97c1d2b18f05c902.png)Stop/Restart backend”
+Ensure that the Raspberry Pi Pico is connected to the computer, click“![](/media/32e03e9d4211e9ef97c1d2b18f05c902.png)Stop/Restart backend”
 
 ![](/media/2a48bcd6f59f1e11f127f9faa50cad92.png)
 
-As shown below, right-click the
-file“Project\_03\_External\_LED\_flashing.py”，select“**Upload to
-/**”to upload the code to the Raspberry Pi Pico.
+As shown below, right-click the file“Project\_03\_External\_LED\_flashing.py”，select**Upload to/**”to upload the code to the Raspberry Pi Pico.
 
 ![](/media/d73c9e4598ed1888447561693be920ca.png)
 
@@ -266,14 +210,11 @@ Upload main.py in the same way
 
 ![](/media/60dea66634bc33fd2a56495765fd6887.png)
 
-Disconnect the USB from the Raspberry Pi Pico and reconnect, the LED in
-the circuit will flash repeatedly.
+Disconnect the USB from the Raspberry Pi Pico and reconnect, the LED in the circuit will flash repeatedly.
 
 ![](/media/2dcc6a55b77b4175b5175f717eb196c3.png)
 
-Note: The code here runs offline. If you want to stop and display the
-information in the Shell window, simply
-click“![](/media/32e03e9d4211e9ef97c1d2b18f05c902.png)Stop/Restart backend” in Thonny software.
- 
+Note: The code here runs offline. If you want to stop and display the information in the Shell window, simply click“![](/media/32e03e9d4211e9ef97c1d2b18f05c902.png)Stop/Restart backend” in Thonny software.
+
 
 ![](/media/a400b9db13988d0762d991a2cb7abaec.png)

@@ -2,16 +2,10 @@
 
 1.  **Introduction**
     
-    We can use modules such as monitors to do various experiments in
-    life. You can also DIY a variety of small objects. For example, you
-    can make a temperature meter with a temperature sensor and display,
-    or make a distance meter with an ultrasonic module and display.
+We can use modules such as monitors to do various experiments in life. You can also DIY a variety of small objects. For example, you can make a temperature meter with a temperature sensor and display, or make a distance meter with an ultrasonic module and display.
     
-    In this project, we will use the LCD\_128X32\_DOT module as a
-    display and connect it to a Raspberry Pi Pico, which will be used to
-    control the LCD\_128X32\_DOT display to show various English
-    characters, common symbols and numbers.
-
+In this project, we will use the LCD\_128X32\_DOT module as a display and connect it to a Raspberry Pi Pico, which will be used to control the LCD\_128X32\_DOT display to show various English characters, common symbols and numbers.
+    
 2.  **Components Required**
 
 <table>
@@ -33,16 +27,9 @@
 
 3.  **Component Knowledge**
     
-    ![](/media/2c2645e94a00867ac23e8a022f0a631a.png)
+![](/media/2c2645e94a00867ac23e8a022f0a631a.png)
 
-**LCD\_128X32\_DOT:** It is an LCD module with 128\*32 pixels and its
-driver chip is ST7567A. The module uses the IIC communication mode,
-while the code contains a library of all alphabets and common symbols
-that can be called directly. When using, we can also set it in the code
-so that the English letters and symbols show different text sizes. To
-make it easy to set up the pattern display, we also provide a mold
-capture software that converts a specific pattern into control code and
-then copies it directly into the test code for use.
+**LCD\_128X32\_DOT:** It is an LCD module with 128\*32 pixels and its driver chip is ST7567A. The module uses the IIC communication mode, while the code contains a library of all alphabets and common symbols that can be called directly. When using, we can also set it in the code so that the English letters and symbols show different text sizes. To make it easy to set up the pattern display, we also provide a mold capture software that converts a specific pattern into control code and then copies it directly into the test code for use.
 
 **Schematic diagram:**
 
@@ -60,30 +47,20 @@ Optimal operating voltage(module):5.0V
 
 4.  **Circuit Diagram and Wiring Diagram**
     
-    Note: The LCD\_128X32\_DOT must be connected with 10CM M-F Dupont
-    wires, which can make the LCD\_128X32\_DOT display
-    normally. Otherwise, using 20CM M-F Dupont wires may cause the
-    LCD\_128X32\_DOT display abnormally.  
+Note: The LCD\_128X32\_DOT must be connected with 10CM M-F Dupont wires, which can make the LCD\_128X32\_DOT display
+normally. Otherwise, using 20CM M-F Dupont wires may cause the LCD\_128X32\_DOT display abnormally.  
 
 ![](/media/82aae0a70e5628c53d7f81f7730cf79a.png)
 
 5.  **Test Code**
 
-The code used in this project is saved in the file KS3020 Keyestudio
-Raspberry Pi Pico Learning Kit Ultimate Edition\\3. Raspberry Pi
-System\\Python\_Tutorial\\2. Projects\\Project 17：I2C 128×32 LCD.
+The code used in this project is saved in the file KS3020 Keyestudio Raspberry Pi Pico Learning Kit Ultimate Edition\\3. Raspberry Pi System\\Python\_Tutorial\\2. Projects\\Project 17：I2C 128×32 LCD.
 
-You can move the code anywhere. We save the code to the pi folder of the
-Raspberry Pi system. The path:home/pi/2. Projects
+You can move the code anywhere. We save the code to the pi folder of the Raspberry Pi system. The path:home/pi/2. Projects
 
 ![](/media/ae27830403a2f741aa9b725e5324c215.png)
 
-Open“Thonny”, click“This computer”→“home”→“pi”→“2. Projects”→“Project
-17： I2C 128×32 LCD”.
-Select“lcd128\_32.py”and“lcd128\_32\_fonts.py”，right-click and
-select“Upload to /”，wait for the“lcd128\_32.py”and
-the“lcd128\_32\_fonts.py”to be uploaded to the Raspberry Pi Pico. And
-double--click the“Project\_17\_I2C\_128\_32\_LCD.py”.
+Open“Thonny”, click“This computer”→“home”→“pi”→“2. Projects”→“Project 17： I2C 128×32 LCD”. Select “lcd128\_32.py”and“lcd128\_32\_fonts.py”，right-click and select“Upload to /”，wait for the“lcd128\_32.py”and the “lcd128\_32\_fonts.py”to be uploaded to the Raspberry Pi Pico. And double--click the“Project\_17\_I2C\_128\_32\_LCD.py”.
 
 ![](/media/cf6da403bb3a70da064a800abfcdf3e8.png)
 
@@ -135,17 +112,12 @@ double--click the“Project\_17\_I2C\_128\_32\_LCD.py”.
 
 6.  **Test Result**
     
-    Ensure that the Raspberry Pi Pico is connected to the
-    computer，click“![](/media/ec00367ea605788eab454cd176b94c7b.png)Stop/Restart backend”.
+Ensure that the Raspberry Pi Pico is connected to the computer，click“![](/media/ec00367ea605788eab454cd176b94c7b.png)Stop/Restart backend”.
 
 ![](/media/e47d31acdd5429afcd63acfb0fd0a039.png)
 
-Click “![](/media/bb4d9305714a178069d277b20e0934b7.png)Run current script”, the code starts
-executing, we will see that the LCD module display will show
-"KEYESTUDIO" at the first line. "ABCDEFGHIJKLMNOPQR" will be displayed
-at the second line. "123456789 + - \* / \<\> = $ @ " will be shown at
-the third line and "% ^ & () {} :; '|?,. \~ \\\\ \[\] " will be
-displayed at the fourth line. Press“Ctrl+C”or
-click“![](/media/ec00367ea605788eab454cd176b94c7b.png)Stop/Restart backend”to exit the program.
+Click “![](/media/bb4d9305714a178069d277b20e0934b7.png)Run current script”, the code starts executing, we will see that the LCD module display will show "KEYESTUDIO" at the first line. "ABCDEFGHIJKLMNOPQR" will be displayed at the second line. "123456789 + - \* / \<\> = $ @ " will be shown at the third line and "% ^ & () {} :; '|?,. \~ \\\\ \[\] " will be displayed at the fourth line. 
+
+Press“Ctrl+C”or click“![](/media/ec00367ea605788eab454cd176b94c7b.png)Stop/Restart backend”to exit the program.
 
 ![](/media/ffc4f1df389a52a9b016f4fae9a7b703.png)
